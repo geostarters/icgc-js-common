@@ -1,13 +1,13 @@
 {
-  "name": "project-template",
+  "name": "icgc-js-common",
   "version": "0.0.1",
-  "description": "A javascript project template",
+  "description": "ICGC js common",
   "author": "@geostarters",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/geostarters/js-project-template.git"
+    "url": "git://github.com/geostarters/icgc-js-common.git"
   },
   "engines": {
     "node": ">=6.4.0"
