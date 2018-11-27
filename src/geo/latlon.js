@@ -1,5 +1,5 @@
 // @flow
-"use strict";
+
 
 /**
  * A `LatLon` object represents a given latitude and longitude coordinates.

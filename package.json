@@ -63,11 +63,11 @@
     "build-min": "browserify src/index.js --debug --plugin [minifyify --map project-template.js.map --output dist/project-template.js.map] --standalone project-template | derequire > dist/project-template.js",
     "start-server": "st --no-cache -H 127.0.0.1 --port 9966 --index index.html .",
     "start": "run-p watch-dev start-server open",
-	"open": "node build/dev-server.js",
+    "open": "node build/dev-server.js",
     "build-docs": "documentation build --github --format json --config ./docs/documentation.yml --output docs/components/api.json src/index.js",
-    "lint": "eslint --fix --cache --ignore-path .gitignore src test bench docs",
+    "lint": "eslint --fix --cache --ignore-path .gitignore src test",
     "lint-docs": "documentation lint src/index.js",
-    "test": "run-s lint test-flow test-unit",
+    "test": "run-s lint test-unit",
     "test-unit": "tap --reporter classic --no-coverage test/unit",
     "test-flow": "flow .",
     "test-cov": "nyc --require=flow-remove-types/register --reporter=text-summary --reporter=lcov --cache npm run test-unit",
@@ -81,6 +81,7 @@
     ".flowconfig"
   ],
   "dependencies": {
+    "axios": "^0.18.0",
     "brfs": "^1.4.4",
     "bubleify": "^1.1.0",
     "eslint-config-geostart": "git+https://github.com/geostarters/eslint-config-geostart.git",

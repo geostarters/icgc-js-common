@@ -1,4 +1,4 @@
-"use strict";
+
 
 require("flow-remove-types/register");
 const test = require("tap").test;
