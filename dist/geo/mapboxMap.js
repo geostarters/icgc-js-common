@@ -1,7 +1,7 @@
 //      
 
 
-import Map from "./Map";
+import Map from "./map.js";
 import mapboxgl from "mapbox-gl";
 
 /**
