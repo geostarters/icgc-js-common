@@ -1,6 +1,6 @@
 {
   "name": "icgc-js-common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ICGC js common",
   "author": "@geostarters",
   "main": "src/index.js",
@@ -85,6 +85,7 @@
     "brfs": "^1.4.4",
     "bubleify": "^1.1.0",
     "eslint-config-geostart": "git+https://github.com/geostarters/eslint-config-geostart.git",
+    "mapbox-gl": "^0.51.0",
     "opn": "^5.3.0",
     "tap": "^11.1.0",
     "unassertify": "^2.1.0",
