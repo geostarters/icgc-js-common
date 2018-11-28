@@ -9,7 +9,7 @@
  * @example
  * var ll = new LatLon(42.10376, 1.84584);
  */
-export class LatLon {
+export default class LatLon {
 
 	lat: number;
 	lon: number;

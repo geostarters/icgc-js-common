@@ -1,6 +1,6 @@
 // @flow
 
-export class Utils {
+export default class Utils {
 
 	/**
  *Remove the item at the specified position

@@ -14,7 +14,7 @@ const LatLon = require("./latlon");
  * var ne = new LatLon(42.90816, 3.317178);
  * var llb = new LatLonBounds(sw, ne);
  */
-export class LatLonBounds {
+export default class LatLonBounds {
 
 	ne: LatLon;
 	sw: LatLon;
