@@ -1,8 +1,10 @@
 //      
 
-export LatLon from "./geo/latlon";
-export LatLonBounds from "./geo/latlonBounds";
-export Map from "./geo/map";
-export MapboxMap from "./geo/mapboxMap";
-export Request from "./request";
-export Utils from "./utils";
+import LatLon from "./geo/latlon";
+import LatLonBounds from "./geo/latlonBounds";
+import Map from "./geo/map";
+import MapboxMap from "./geo/mapboxMap";
+import Request from "./request";
+import Utils from "./utils";
+
+export { LatLon, LatLonBounds, Map, MapboxMap, Request, Utils };
