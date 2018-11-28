@@ -7,7 +7,7 @@
  * @param {string} containerId The container id where the map will be drawn
  * @param {string} styleId The style id that will be used to draw the map
  */
-export class Map {
+export default class Map {
 
 	                    
 	                       
