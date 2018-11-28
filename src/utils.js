@@ -1,6 +1,6 @@
 // @flow
 
-class Utils {
+export class Utils {
 
 	/**
  *Remove the item at the specified position
@@ -56,5 +56,3 @@ class Utils {
 	}
 
 }
-
-module.exports = Utils;

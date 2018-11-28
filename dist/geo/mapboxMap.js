@@ -11,7 +11,7 @@ import mapboxgl from "mapbox-gl";
  * @param {string} containerId The container id where the map will be drawn
  * @param {string} styleId The style id that will be used to draw the map
  */
-class MapboxMap extends Map {
+export class MapboxMap extends Map {
 
 	               
 	                 
@@ -422,4 +422,3 @@ class MapboxMap extends Map {
 
 }
 
-module.exports = MapboxMap;

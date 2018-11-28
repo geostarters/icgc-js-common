@@ -5,7 +5,7 @@ const axios = require("axios");
 /**
  * Request functions
  */
-class Request {
+export class Request {
 
 	/**
 	 * Processes a request response checking if the results are ok
@@ -116,4 +116,3 @@ class Request {
 
 }
 
-module.exports = Request;

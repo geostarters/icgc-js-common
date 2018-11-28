@@ -7,7 +7,7 @@
  * @param {string} containerId The container id where the map will be drawn
  * @param {string} styleId The style id that will be used to draw the map
  */
-class Map {
+export class Map {
 
 	options: MapOptions;
 	isInitialized: boolean;
@@ -234,5 +234,3 @@ class Map {
 
 
 }
-
-module.exports = Map;

@@ -9,7 +9,7 @@
  * @example
  * var ll = new LatLon(42.10376, 1.84584);
  */
-class LatLon {
+export class LatLon {
 
 	lat: number;
 	lon: number;
@@ -80,5 +80,3 @@ class LatLon {
 	}
 
 }
-
-module.exports = LatLon;
