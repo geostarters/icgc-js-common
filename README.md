@@ -31,9 +31,10 @@ Run the [testing coverage]() script to see which percentage of code is being tes
 
 ## Provided scripts
 
-* __build-dev__: Creates a single file package with all the assertions intact. 
+* __build-dev__: Creates a single file package with all the assertions intact to be ussed in browsers. 
 * __watch-dev__: Watches the source
-* __build-min__: Creates a minified package with its map file and without assertions
+* __build-min__: Creates a minified package with its map file and without assertions to be ussed in browsers
+* __build-unflow__: Builds ready-to-use modules in dist by removing flow types
 * __start-server__: Starts a debug server on the current directory
 * __start__: Watches the source for changes and runs the debug server
 * __build-docs__: Generates the documentation file

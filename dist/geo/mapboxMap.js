@@ -1,7 +1,7 @@
-// @flow
+//      
 
 
-import Map from "./map.js";
+import Map from "./Map";
 import mapboxgl from "mapbox-gl";
 
 /**
@@ -13,15 +13,15 @@ import mapboxgl from "mapbox-gl";
  */
 class MapboxMap extends Map {
 
-	apiKey: string;
-	layerIds: Object;
-	sourceIds: Object;
+	               
+	                 
+	                  
 
-	static ATTRIBUTION_CONTROL: 1;
-	static POPUP_CONTROL: 2;
-	static ZOOM_CONTROL: 3;
+	                              
+	                        
+	                       
 
-	constructor(apiKey: ?string, options: ?MapOptions) {
+	constructor(apiKey         , options             ) {
 
 		const defaultParameters = {
 			container: "",
@@ -78,7 +78,7 @@ class MapboxMap extends Map {
 	 * @param {MapData} data
 	 * @see Map::addData
 	 */
-	addMapData(data: MapData) {
+	addMapData(data         ) {
 
 		data.sources.forEach(source => {
 
@@ -162,7 +162,7 @@ class MapboxMap extends Map {
 	 * @see Map::getPaintProperty
 	 */
 
-	getPaintProperty(layerid: string, property: string) {
+	getPaintProperty(layerid        , property        ) {
 
 
 		return this.map.getPaintProperty(layerid, property);
@@ -176,7 +176,7 @@ class MapboxMap extends Map {
 	 * @param {baseLayr} url
 	 * @see Map::setMapBaseLayer
 	 */
-	setMapBaseLayer(baseLayerURL: string) {
+	setMapBaseLayer(baseLayerURL        ) {
 
 		return new Promise((resolve) => {
 
@@ -211,7 +211,7 @@ class MapboxMap extends Map {
 
 	}
 
-	fitBounds(bounds: array) {
+	fitBounds(bounds       ) {
 
 		this.map.fitBounds(bounds);
 
@@ -254,13 +254,13 @@ class MapboxMap extends Map {
 	}
 
 
-	getLayer(id: string) {
+	getLayer(id        ) {
 
 		return this.map.getLayer(id);
 
 	}
 
-	setCursorPointer(pointer: string) {
+	setCursorPointer(pointer        ) {
 
 		this.map.getCanvas().style.cursor = pointer;
 
@@ -343,7 +343,7 @@ class MapboxMap extends Map {
 
 	}
 
-	updateLayer(layer: object) {
+	updateLayer(layer        ) {
 
 		if (this.map.getLayer(layer.id)) {
 
@@ -363,7 +363,7 @@ class MapboxMap extends Map {
 	 *
 	 * @param {string} apiKey
 	 */
-	setAPIKey(apiKey: string) {
+	setAPIKey(apiKey        ) {
 
 		this.apiKey = apiKey;
 
@@ -390,7 +390,7 @@ class MapboxMap extends Map {
 
 	}
 
-	addControlMap(control, position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left') {
+	addControlMap(control, position                                                            ) {
 
 		this.map.addControl(control, position);
 
