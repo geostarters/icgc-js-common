@@ -1,6 +1,6 @@
-# Javascript Project Template
+# ICGC-JS-COMMON
 
-Base javascript project with a default configuration
+A Javascript lib with common functionalities to use across different projects.
 
 * Uses [unassert](https://github.com/unassert-js/unassert) to encourage programming with assertions
 * Generates a single file package using [browserify](http://browserify.org/)
