@@ -1,8 +1,6 @@
 // @flow
 
-
 import Map from "./map.js";
-import mapboxgl from "mapbox-gl";
 
 /**
  * Map using the mapbox backend
