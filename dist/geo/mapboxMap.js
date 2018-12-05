@@ -19,7 +19,7 @@ export default class MapboxMap extends Map {
 	                        
 	                       
 
-	constructor(apiKey         , options             ) {
+	constructor(mapboxObject        , apiKey         , options             ) {
 
 		const defaultParameters = {
 			container: "",
@@ -33,6 +33,7 @@ export default class MapboxMap extends Map {
 		this.apiKey = apiKey || "";
 		this.layerIds = {};
 		this.sourceIds = {};
+		this.mapboxObject = mapboxObject;
 
 	}
 
@@ -46,8 +47,8 @@ export default class MapboxMap extends Map {
 	 */
 	mapCreate(resolve) {
 
-		mapboxgl.accessToken = this.apiKey;
-		this.map = new mapboxgl.Map(this.options);
+		this.mapboxObject.accessToken = this.apiKey;
+		this.map = new this.mapboxObject.Map(this.options);
 		this.isInitialized = true;
 		this.map.on("load", () => {
 
