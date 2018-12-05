@@ -1,8 +1,6 @@
 // @flow
 
-
 import Map from "./map.js";
-import mapboxgl from "mapbox-gl";
 
 /**
  * Map using the mapbox backend
@@ -21,7 +19,7 @@ export default class MapboxMap extends Map {
 	static POPUP_CONTROL: 2;
 	static ZOOM_CONTROL: 3;
 
-	constructor(apiKey: ?string, options: ?MapOptions) {
+	constructor(mapboxObject: Object, apiKey: ?string, options: ?MapOptions) {
 
 		const defaultParameters = {
 			container: "",
@@ -35,6 +33,7 @@ export default class MapboxMap extends Map {
 		this.apiKey = apiKey || "";
 		this.layerIds = {};
 		this.sourceIds = {};
+		this.mapboxObject = mapboxObject;
 
 	}
 
@@ -48,8 +47,8 @@ export default class MapboxMap extends Map {
 	 */
 	mapCreate(resolve) {
 
-		mapboxgl.accessToken = this.apiKey;
-		this.map = new mapboxgl.Map(this.options);
+		this.mapboxObject.accessToken = this.apiKey;
+		this.map = new this.mapboxObject.Map(this.options);
 		this.isInitialized = true;
 		this.map.on("load", () => {
 
