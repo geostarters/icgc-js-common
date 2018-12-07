@@ -420,4 +420,3 @@ export default class MapboxMap extends Map {
 	}
 
 }
-
