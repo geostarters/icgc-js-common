@@ -2,8 +2,8 @@
   "name": "@geostarters/common",
   "homepage": "https://github.com/geostarters/icgc-js-common",
   "bugs": "https://github.com/geostarters/icgc-js-common/issues",
-  "version": "0.0.4",
-  "description": "ICGC js common",
+  "version": "0.0.5",
+  "description": "ICGC JS common",
   "author": "@geostarters",
   "main": "dist/index.js",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "node": ">=6.4.0"
   },
   "devDependencies": {
+    "@geostarters/eslint-config": "0.0.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-preset-env": "^1.7.0",
@@ -27,7 +28,6 @@
     "derequire": "^2.0.6",
     "documentation": "^5.3.5",
     "envify": "^4.1.0",
-    "eslint-config-geostart": "git+https://github.com/geostarters/eslint-config-geostart.git",
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-node": "^5.2.1",
     "esm": "^3.0.84",

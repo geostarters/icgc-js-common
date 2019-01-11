@@ -1,6 +1,6 @@
 {
   "extends": [
-    "geostart"
+    "@geostarters"
   ],
   "parserOptions": {
 	  "sourceType": "module"
