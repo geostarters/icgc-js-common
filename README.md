@@ -1,4 +1,5 @@
-# ICGC-JS-COMMON
+# ICGC-COMMON
+[![npm version](https://badge.fury.io/js/%40geostarters%2Fcommon.svg)](https://badge.fury.io/js/%40geostarters%2Fcommon)
 
 A Javascript lib with common functionalities to use across different projects.
 
