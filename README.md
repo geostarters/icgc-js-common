@@ -1,5 +1,9 @@
 # ICGC-COMMON
 [![npm version](https://badge.fury.io/js/%40geostarters%2Fcommon.svg)](https://badge.fury.io/js/%40geostarters%2Fcommon)
+[![Build Status Linux](https://travis-ci.org/geostarters/icgc-js-common.svg?branch=master)](https://travis-ci.org/geostarters/icgc-js-common)
+[![Build status](https://ci.appveyor.com/api/projects/status/aa2bikit893mt4xq/branch/master?svg=true)](https://ci.appveyor.com/project/geostarters/icgc-js-common/branch/master)
+[![Dependency Status](https://david-dm.org/geostarters/icgc-js-common.svg)](https://david-dm.org/geostarters/icgc-js-common)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 A Javascript lib with common functionalities to use across different projects.
 
