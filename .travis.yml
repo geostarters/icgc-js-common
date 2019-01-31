@@ -1,10 +1,31 @@
 language: node_js
 cache:
-   directories:
-     - node_modules
+  directories:
+    - node_modules
 node_js:
   - 8
+branches:
+  except:
+    - /^v?\d+\.\d+\.\d+$/
 before_script:
   - npm install
 script:
-  - npm run build-web
+  - npm run build-all
+before_install:
+   # Create a git tag of the new version to use
+  # If package.json major and minor versions match last tag, then increment last tag. Else use package.json major.minor.0.
+  - "{ sed -nE 's/^[ \\t]*\"version\": \"([0-9]{1,}\\.[0-9]{1,}\\.)[0-9x]{1,}\",$/\\1/p' package.json; git describe --abbrev=0 | sed -E 's/^v([0-9]{1,}\\.[0-9]{1,}\\.)([0-9]{1,})$/\\1 \\2/g'; } | tr \"\\n\" \" \" | awk '{printf($1==$2?\"v\"$2$3+1:\"v\"$1\"0\")}' | xargs -I {} git tag -a {} -m \"{}\"\n"
+  # Update package.json based on the git tag we just created
+  - npm --no-git-tag-version version from-git
+deploy:
+  - provider: npm
+    email: geostarters@gmail.com
+    api_key:
+      secure: EbNIoxf6l57RBeJFi4GlgkesWKAXK9t1WA1rB3zvlY39Q3NjlDnWL7CWc7wBuyEHtmRqdY8SmRB+xhbukf1M1sP+Ztc5alW9yOe4Am9wusdt8c7rahNJS8M9Lq1960qNs/382eyG2x0hB5MASoVxYrlcy7L439c7htRdGKGLqdWQpTX9BNmpIPI1CyR4lUMObDQX/5R/Duwws++wDpC8MtUB4Y47uIsnfnW5x5wuWhZHKZxvi/OsGS1ULLGp5GfsRY06C4EdmuKDqN8M9bO8wWL8341kFjgTkyOCjwZTTmC/LDSKs/V0jBfjKSu8TONT7QIqqJ7kHcbW7YJ5DUWOfa7fbikUOGTucvbtszCL9JOvmWJB/JBkRJqiH2cntecVzKfuX3k5P+s/tFIFNZN0XfR9FFl0PpyAUhXOTLvN7CgS0j6u46rC0fKzJ1Y8b6wBXn7IQSRhW0yz7bf4cV4IRFryzuP6qWZ7je6igpv4DFZl+epMtvQ+creOdIVqw+rQDqKTxbrZ2oRMyip2tV/woQ29Ah5TKn5UwQWguavtvR2xteVIuuWMedkoSqB8ZHkm2K4afjMhpi/x0jsZn7W8jMXaEpTkrvtt1hhAHvhsTnnB257VObJ0sE2H+mKdy7bMZthh4If9/DnVRjsUlfAZNNpBQRP3oSD0HIt69qHY/eM=
+    on:
+      branch: master
+  - provider: script
+    skip_cleanup: true
+    script: git push --tags
+    on:
+      branch: master
