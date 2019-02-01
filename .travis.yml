@@ -19,7 +19,7 @@ before_install:
 - "awk '{printf($1==$2?$2$3+1:$1\"0\")}' aux.txt | xargs -I {} git tag -a {} -m \"{}\"\n"
 - rm aux.txt
   # Update package.json based on the git tag we just created
-- npm version from-git -m "%s"
+- npm --no-git-tag-version version from-git
   # Push the commit with the updated package.json back to the repo
 - git branch travis-temp
 - git checkout master
