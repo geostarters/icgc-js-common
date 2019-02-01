@@ -23,8 +23,6 @@ before_install:
 - git merge travis-temp
 - git push https://geostarters:${GITHUB_TOKEN}@github.com/geostarters/icgc-js-common.git
 - git push --tags https://geostarters:${GITHUB_TOKEN}@github.com/geostarters/icgc-js-common.git
-postversion: 
-  - git add package.json package-lock.json && git commit -m [skip travis] $npm_package_version
 deploy:
 - provider: npm
   email: geostarters@gmail.com
