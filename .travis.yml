@@ -16,7 +16,7 @@ before_install:
   # If package.json major and minor versions match last tag, then increment last tag. Else use package.json major.minor.0.
 - "{ sed -nE 's/^[ \\t]*\"version\": \"([0-9]{1,}\\.[0-9]{1,}\\.)[0-9x]{1,}\",$/\\1/p' package.json; git describe --abbrev=0 | sed -E 's/^v([0-9]{1,}\\.[0-9]{1,}\\.)([0-9]{1,})$/\\1 \\2/g'; } | { tr \"\\n\" \" \"; sleep 3; } >> aux.txt"
 - "cat aux.txt"
-- "awk '{printf($1==$2?$2$3+1:$1\"0\")}' aux.txt | xargs -I {} git tag -a {} -m \"{}\"\n"
+- "awk '{printf($1==$2?\"v\"$2$3+1:\"v\"$1\"0\")}' aux.txt | xargs -I {} git tag -a {} -m \"{}\"\n"
 - rm aux.txt
   # Update package.json based on the git tag we just created
 - npm --no-git-tag-version version from-git
