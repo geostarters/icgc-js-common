@@ -98,7 +98,7 @@
     "test-unit": "tap --reporter classic --no-coverage test/unit",
     "test-flow": "flow .",
     "test-cov": "nyc --require=flow-remove-types/register --reporter=text-summary --reporter=lcov --cache npm run test-unit",
-    "pre-production": "run-s lint build-min test test-cov"
+    "pre-production": "run-s lint build-min test test-cov" 
   },
   "files": [
     "build/",
