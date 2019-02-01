@@ -2,7 +2,7 @@
   "name": "@geostarters/common",
   "homepage": "https://github.com/geostarters/icgc-js-common",
   "bugs": "https://github.com/geostarters/icgc-js-common/issues",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "ICGC JS common",
   "author": "@geostarters",
   "main": "dist/index.js",
@@ -98,7 +98,7 @@
     "test-unit": "tap --reporter classic --no-coverage test/unit",
     "test-flow": "flow .",
     "test-cov": "nyc --require=flow-remove-types/register --reporter=text-summary --reporter=lcov --cache npm run test-unit",
-    "pre-production": "run-s lint build-min test test-cov" 
+    "pre-production": "run-s lint build-min test test-cov"
   },
   "files": [
     "build/",
