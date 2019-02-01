@@ -29,7 +29,7 @@ deploy:
     branch: master
 - provider: script
   skip_cleanup: true
-  script: .travis/push.sh
+  script: ".travis/push.sh"
   on:
     branch: master
 env:
