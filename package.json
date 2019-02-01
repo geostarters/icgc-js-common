@@ -2,7 +2,7 @@
   "name": "@geostarters/common",
   "homepage": "https://github.com/geostarters/icgc-js-common",
   "bugs": "https://github.com/geostarters/icgc-js-common/issues",
-  "version": "0.1.0",
+  "version": "0.1.13",
   "description": "ICGC JS common",
   "author": "@geostarters",
   "main": "dist/index.js",
