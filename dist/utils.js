@@ -1,6 +1,6 @@
 //      
 
-export default class Utils {
+class Utils {
 
 	/**
  *Remove the item at the specified position
@@ -56,3 +56,4 @@ export default class Utils {
 	}
 
 }
+module.exports = Utils;
