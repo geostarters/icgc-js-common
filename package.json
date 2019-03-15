@@ -96,6 +96,7 @@
     "lint-docs": "documentation lint src/index.js",
     "test": "run-s lint test-unit",
     "test-unit": "tap --reporter classic --no-coverage test/unit",
+    "test-unit-c": "tap --reporter classic --no-coverage test/unit/jsonToMap.test.js",
     "test-flow": "flow .",
     "test-cov": "nyc --require=flow-remove-types/register --reporter=text-summary --reporter=lcov --cache npm run test-unit",
     "pre-production": "run-s lint build-min test test-cov"
@@ -108,7 +109,10 @@
     ".flowconfig"
   ],
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "chroma-js": "^2.0.3",
+    "geojson-extent": "^0.3.2",
+    "geostats": "^1.7.0"
   },
   "peerDependencies": {
     "mapbox-gl": "^0.51.0"

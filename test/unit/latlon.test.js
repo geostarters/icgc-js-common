@@ -1,5 +1,5 @@
 
-
+/* eslint-disable  */
 require("flow-remove-types/register");
 const test = require("tap").test;
 const LatLon = require("../../src/geo/latlon");
