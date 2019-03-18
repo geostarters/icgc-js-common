@@ -1,11 +1,11 @@
 //      
 
-const axios = require("axios");
+import axios from "axios";
 
 /**
  * Request functions
  */
-class Request {
+export default class Request {
 
 	/**
 	 * Processes a request response checking if the results are ok
@@ -116,5 +116,4 @@ class Request {
 
 }
 
-module.exports = Request;
 

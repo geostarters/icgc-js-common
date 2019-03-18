@@ -1,7 +1,7 @@
 // @flow
 
 
-const LatLon = require("./latlon");
+import LatLon from "./latlon";
 
 /**
  * A `LatLonBounds` represents a geographical bounding box,

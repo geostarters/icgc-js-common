@@ -1,9 +1,7 @@
 // @flow
 
-
-const BridgeStatics = require("./bridgeStatics");
-const UtilsStatics = require("./utilsStatics");
-
+import BridgeStatics from "./bridgeStatics";
+import UtilsStatics from "./utilsStatics";
 
 /**
  * Return basic stats from a GeoJson data a title field from geojson properties.
@@ -15,7 +13,7 @@ const UtilsStatics = require("./utilsStatics");
 const geoJSON = {"type": "FeatureCollection", "features": [{ "type": "Feature", "properties": {"temp": 2 }, "geometry": {"type": "Point", "coordinates": [2.33184814453125, 41.76926321969369] }}, { "type": "Feature", "properties": {"temp": 2 }, "geometry": {"type": "Point", "coordinates": [2.2686767578125, 41.78014491449217] }}, { "type": "Feature", "properties": {"temp": 5 }, "geometry": {"type": "Point", "coordinates": [2.2703933715820312, 41.725717979972345] }}, { "type": "Feature", "properties": {"temp": "" }, "geometry": {"type": "Point", "coordinates": [2.346096038818359, 41.74698199279457] }}, { "type": "Feature", "properties": {"temp": 1 }, "geometry": {"type": "Point", "coordinates": [2.137527465820312, 41.929868314485795] }}, { "type": "Feature", "properties": {"temp": 8 }, "geometry": {"type": "Point", "coordinates": [2.006378173828125, 41.707266387090684] }}] };
 const geoSattics= new GeoJSONStatics(geoJSON, keyField)
  */
-class GeoJSONStatistics {
+export default class GeoJSONStatistics {
 
 
 	geoJSON: object;
@@ -187,4 +185,3 @@ class GeoJSONStatistics {
 
 } //end classe
 
-module.exports = GeoJSONStatistics;

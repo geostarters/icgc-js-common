@@ -1,8 +1,9 @@
 /* eslint-disable */
 //      
 "use strict";
-const Chroma = require("chroma-js");
-const UtilsStatics = require("../geo/utilsStatics");
+
+import Chroma from "chroma-js";
+import UtilsStatics from "../geo/utilsStatics";
 
 /**
  * A `Colorizator` object represents a given latitude and longitude coordinates.
@@ -12,7 +13,7 @@ const UtilsStatics = require("../geo/utilsStatics");
  * @example
  * const color = new Colorizator();
  */
-class Colorizator {
+export default class Colorizator {
 
 
 	constructor() {
@@ -331,5 +332,3 @@ class Colorizator {
 	}
 
 } //end colorizator class
-
-module.exports = Colorizator;

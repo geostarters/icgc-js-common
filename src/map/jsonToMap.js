@@ -1,7 +1,7 @@
 // @flow
 
-const Request = require("../request");
 
+import Request from "../request";
 
 /**
  * Parse information from JSON.
@@ -12,7 +12,7 @@ const Request = require("../request");
  */
 
 
-class JsonToMap {
+export default class JsonToMap {
 
 
 	constructor() {
@@ -192,5 +192,3 @@ class JsonToMap {
 
 
 }
-
-module.exports = JsonToMap;
