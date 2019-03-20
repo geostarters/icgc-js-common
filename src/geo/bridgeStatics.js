@@ -1,6 +1,7 @@
 // @flow
 
-const GeoStats = require("geostats");
+
+import GeoStats from "geostats";
 /**
  * A `BridgeStatics` object represents a given latitude and longitude coordinates.
  *
@@ -9,7 +10,7 @@ const GeoStats = require("geostats");
  * @example
  * var ll = new BridgeStatics(42.10376, 1.84584);
  */
-class BridgeStatics {
+export default class BridgeStatics {
 
 	arrayColumn: Array<number> ;
 	geoStats: object;
@@ -124,4 +125,3 @@ class BridgeStatics {
 
 } //end class
 
-module.exports = BridgeStatics;

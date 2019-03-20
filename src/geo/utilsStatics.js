@@ -7,7 +7,7 @@
  * @example
  * var utils = new UtilsStatics();
  */
-class UtilsStatics {
+export default class UtilsStatics {
 
 
 	constructor() {}
@@ -96,4 +96,3 @@ class UtilsStatics {
 
 } //ebd class
 
-module.exports = UtilsStatics;

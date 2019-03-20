@@ -1,8 +1,7 @@
 // @flow
 
-
-const BridgeStatics = require("./bridgeStatics");
-const UtilsStatics = require("./utilsStatics");
+import BridgeStatics from "./bridgeStatics";
+import UtilsStatics from "./utilsStatics";
 
 
 /**
@@ -107,4 +106,4 @@ class ArrayStatics {
 
 } //end classe
 
-module.exports = ArrayStatics;
+export default ArrayStatics;

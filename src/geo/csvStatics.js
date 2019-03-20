@@ -1,9 +1,7 @@
 // @flow
 
-
-const BridgeStatics = require("./bridgeStatics");
-const UtilsStatics = require("./utilsStatics");
-
+import BridgeStatics from "./bridgeStatics";
+import UtilsStatics from "./utilsStatics";
 
 /**
  * Generate basic statistics from CSV array.
@@ -20,7 +18,7 @@ const UtilsStatics = require("./utilsStatics");
 	const numCSVColumn = 1;
 	const csvStatics = new CSVStatics(arrayCSV, numCSVColumn);
  */
-class CSVStatics {
+export default class CSVStatics {
 
 
 	constructor(arrayCSV: Array<number>, numCSVColumn: number) {
@@ -141,4 +139,3 @@ class CSVStatics {
 
 } //end classe
 
-module.exports = CSVStatics;

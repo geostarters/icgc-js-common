@@ -1,11 +1,12 @@
 // @flow
 
-const Colorizator = require("../color/colorizator");
-const GeoJSONStatics = require("../geo/geoJSONStatics");
-const BridgeStatics = require("../geo/bridgeStatics");
-const UtilsStatics = require("../geo/utilsStatics");
-const GeoExtent = require("geojson-extent");
-const Request = require("../request");
+import GeoExtent from "geojson-extent";
+
+import Colorizator from "../color/colorizator";
+import GeoJSONStatics from "../geo/GeoJSONStatics";
+import BridgeStatics from "../geo/BridgeStatics";
+import UtilsStatics from "../geo/UtilsStatics";
+import Request from "../Request";
 
 
 /**
@@ -15,7 +16,7 @@ const Request = require("../request");
  * @example
  * const geo = new MapStyle(geojson);
  */
-class MapStyle {
+export default class MapStyle {
 
 
 	constructor(geoJSON: object) {
@@ -906,4 +907,4 @@ class MapStyle {
 	} //end classe
 
 }
-module.exports = MapStyle;
+
