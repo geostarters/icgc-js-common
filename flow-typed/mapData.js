@@ -1,3 +1,4 @@
+// @flow
 declare type MapData = {
 
     layers: Array<Object>,
