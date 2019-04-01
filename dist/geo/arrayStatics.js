@@ -1,4 +1,4 @@
-// @flow
+//      
 
 import BridgeStatics from "./bridgeStatics";
 import UtilsStatics from "./utilsStatics";
@@ -16,9 +16,9 @@ import UtilsStatics from "./utilsStatics";
 class ArrayStatics {
 
 
-	arrayColumn: Array<number> ;
+	                            
 
-	constructor(arrayColumn: Array<number>) {
+	constructor(arrayColumn               ) {
 
 
 		this.arrayColumn = arrayColumn;
@@ -61,7 +61,7 @@ class ArrayStatics {
 	 * @returns {object}
 	 */
 
-	getBasicsStats(decimals: number) {
+	getBasicsStats(decimals        ) {
 
 
 		this.stats = {
@@ -82,7 +82,7 @@ class ArrayStatics {
 	 * @returns {object}
 	 */
 
-	getStatsFromRangesColorsArray(numRanges: number, arrayColors: Array<string>) {
+	getStatsFromRangesColorsArray(numRanges        , arrayColors               ) {
 
 		if (typeof numRanges === "number" && Array.isArray(arrayColors)) {
 

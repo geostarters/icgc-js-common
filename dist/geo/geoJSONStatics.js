@@ -1,4 +1,4 @@
-// @flow
+//      
 
 import BridgeStatics from "./bridgeStatics";
 import UtilsStatics from "./utilsStatics";
@@ -16,10 +16,10 @@ const geoSattics= new GeoJSONStatics(geoJSON, keyField)
 export default class GeoJSONStatistics {
 
 
-	geoJSON: object;
-	keyField: string;
+	                
+	                 
 
-	constructor(geoJSON: object, keyField: string) {
+	constructor(geoJSON        , keyField        ) {
 
 
 		this.geoJSON = geoJSON || null;
@@ -70,7 +70,7 @@ export default class GeoJSONStatistics {
 	 * @returns {object}
 	 */
 
-	getStatsFromRangesColorsGeoJSON(numRanges: number, arrayColors: Array<string>) {
+	getStatsFromRangesColorsGeoJSON(numRanges        , arrayColors               ) {
 
 
 		if (typeof numRanges === "number" && Array.isArray(arrayColors)) {
@@ -100,7 +100,7 @@ export default class GeoJSONStatistics {
 	 * @returns {array} `this`
 	 */
 
-	getColumnFromGEOJSON(keyField: string, GeoJSON: object, forceNumber: boolean = false) {
+	getColumnFromGEOJSON(keyField        , GeoJSON        , forceNumber          = false) {
 
 		const items = [];
 		let _count = 0;
@@ -162,7 +162,7 @@ export default class GeoJSONStatistics {
 	 * @returns {array} `this`
 	 */
 
-	_getColumFromGEOJSONFilter(keyField: string, GeoJSON: object, keyFilter: string, valueFilter: string) {
+	_getColumFromGEOJSONFilter(keyField        , GeoJSON        , keyFilter        , valueFilter        ) {
 
 		const items = [];
 		for (const key in GeoJSON.features) {

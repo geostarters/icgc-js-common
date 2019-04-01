@@ -1,6 +1,6 @@
 //      
 
-const axios = require("axios");
+import axios from "axios";
 
 /**
  * Request functions
@@ -115,4 +115,5 @@ export default class Request {
 	}
 
 }
+
 

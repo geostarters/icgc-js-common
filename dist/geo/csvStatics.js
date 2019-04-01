@@ -1,4 +1,4 @@
-// @flow
+//      
 
 import BridgeStatics from "./bridgeStatics";
 import UtilsStatics from "./utilsStatics";
@@ -21,7 +21,7 @@ import UtilsStatics from "./utilsStatics";
 export default class CSVStatics {
 
 
-	constructor(arrayCSV: Array<number>, numCSVColumn: number) {
+	constructor(arrayCSV               , numCSVColumn        ) {
 
 
 		this.numCSVColumn = numCSVColumn;
@@ -65,7 +65,7 @@ export default class CSVStatics {
 	 * @returns {object}
 	 */
 
-	getStatsFromRangesColorsCSV(numRanges: number, arrayColors: Array<string>) {
+	getStatsFromRangesColorsCSV(numRanges        , arrayColors               ) {
 
 		if (typeof numRanges === "number" && Array.isArray(arrayColors)) {
 
@@ -95,7 +95,7 @@ export default class CSVStatics {
 	 */
 
 
-	getColumFromCSV(numColum: number, dataCSV: Array<number>, forceToNumber: boolean = false) {
+	getColumFromCSV(numColum        , dataCSV               , forceToNumber          = false) {
 
 		const arrayColum = [];
 

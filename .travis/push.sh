@@ -8,4 +8,4 @@
 # git checkout master
 # git merge travis-temp
 # git push https://geostarters:${GITHUB_TOKEN}@github.com/geostarters/icgc-js-common.git
-# git push --tags https://geostarters:${GITHUB_TOKEN}@github.com/geostarters/icgc-js-common.git
+git push --tags https://geostarters:${GITHUB_TOKEN}@github.com/geostarters/icgc-js-common.git

@@ -1,4 +1,4 @@
-// @flow
+//      
 
 
 import GeoStats from "geostats";
@@ -12,10 +12,10 @@ import GeoStats from "geostats";
  */
 export default class BridgeStatics {
 
-	arrayColumn: Array<number> ;
-	geoStats: object;
+	                            
+	                 
 
-	constructor(arrayColumn: Array<number>) {
+	constructor(arrayColumn               ) {
 
 
 		if (arrayColumn) {
@@ -42,7 +42,7 @@ export default class BridgeStatics {
 
 	}
 
-	setColorstoStats(arrayColors: Array<string>) {
+	setColorstoStats(arrayColors               ) {
 
 		this.geoStats.setColors(arrayColors);
 
@@ -55,13 +55,13 @@ export default class BridgeStatics {
 	}
 
 
-	getValueFromRangePosition(rangePos: number) {
+	getValueFromRangePosition(rangePos        ) {
 
 		return this.geoStats.getRangeNum(rangePos);
 
 	}
 
-	setClassificationStats(numRanges: number) {
+	setClassificationStats(numRanges        ) {
 
 
 		this.stats.classification = {
@@ -96,7 +96,7 @@ export default class BridgeStatics {
 
 	}
 
-	getBasicsStats(decimals: number) {
+	getBasicsStats(decimals        ) {
 
 		let truncate = 1;
 

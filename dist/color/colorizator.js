@@ -1,5 +1,5 @@
 /* eslint-disable */
-// @flow
+//      
 "use strict";
 
 import Chroma from "chroma-js";
@@ -86,7 +86,7 @@ export default class Colorizator {
 	}
 
 
-	getOppositeGrayScaleColor(colorhex: string) {
+	getOppositeGrayScaleColor(colorhex        ) {
 
 		const llum = Chroma(colorhex).luminance();
 		const _factor = parseFloat(1 - llum);
@@ -118,7 +118,7 @@ export default class Colorizator {
 	 * @returns {color} `this`
 	 */
 
-	getColorArrayfromPositionBrewer(numRangs: number, brewerPosition: number) {
+	getColorArrayfromPositionBrewer(numRangs        , brewerPosition        ) {
 
 		return Chroma.brewer[this.palettes[this._checkBrewerPosition(brewerPosition)]].slice(-this._checkNumRangs(numRangs));
 
@@ -133,7 +133,7 @@ export default class Colorizator {
 	 * @returns {color} `this`
 	 */
 
-	getColorsScaleRanges(numRangs: number, colorInit: string, colorEnd: string) {
+	getColorsScaleRanges(numRangs        , colorInit        , colorEnd        ) {
 
 		if (colorInit === null || colorEnd === null) {
 
@@ -148,7 +148,7 @@ export default class Colorizator {
 	}
 
 
-	_checkNumRangs(numRangs: number) {
+	_checkNumRangs(numRangs        ) {
 
 		if (typeof numRangs === "number") {
 
@@ -162,7 +162,7 @@ export default class Colorizator {
 
 	}
 
-	_checkBrewerPosition(brewerPosition: number) {
+	_checkBrewerPosition(brewerPosition        ) {
 
 		if (typeof brewerPosition === "number") {
 
@@ -176,7 +176,7 @@ export default class Colorizator {
 
 	}
 
-	_checkBrewerName(brewerName: string) {
+	_checkBrewerName(brewerName        ) {
 
 		const _existColor = this.palettes.indexOf(brewerName) !== -1 ? brewerName : this.palettes[Math.floor(Math.random() * this.maxBrewerPalettes)];
 
@@ -192,7 +192,7 @@ export default class Colorizator {
 	 * @returns {color} `this`
 	 */
 
-	getColorArrayfromSelectedBrewer(numRangs: number, brewerName: string) {
+	getColorArrayfromSelectedBrewer(numRangs        , brewerName        ) {
 
 		return Chroma.brewer[this._checkBrewerName(brewerName)].slice(-this._checkNumRangs(numRangs));
 
@@ -200,7 +200,7 @@ export default class Colorizator {
 	}
 
 
-	convertRGBtoHex(rgb: string) {
+	convertRGBtoHex(rgb        ) {
 
 
 		return Chroma(rgb).hex();
@@ -214,7 +214,7 @@ export default class Colorizator {
 	 * @returns {color} `this`
 	 */
 
-	generateHTMLBrewerPalettes(numberPalettes: number, numRangs: number) {
+	generateHTMLBrewerPalettes(numberPalettes        , numRangs        ) {
 
 		let posY = -15;
 		let html = "";
@@ -264,9 +264,9 @@ export default class Colorizator {
 	 * @param {string} numRang 8
 	 * @returns {color} `this`
 	 */
-	generateHTMLLegendColor(legendColors: Array<number>, legendRanges: Array<string>,
-		textTitol: string,
-		classCSS: string) {
+	generateHTMLLegendColor(legendColors               , legendRanges               ,
+		textTitol        ,
+		classCSS        ) {
 
 
 		const _classCSS = classCSS || "legend_class";

@@ -1,4 +1,4 @@
-// @flow
+//      
 
 import GeoExtent from "geojson-extent";
 
@@ -19,7 +19,7 @@ import Request from "../Request";
 export default class MapStyle {
 
 
-	constructor(geoJSON: object) {
+	constructor(geoJSON        ) {
 
 		this.colorizator = new Colorizator();
 		this.Utils = new UtilsStatics();
@@ -60,7 +60,7 @@ export default class MapStyle {
 	}
 
 
-	getAsyncGeoJSON(pathGeoJSON: string, callback: object) {
+	getAsyncGeoJSON(pathGeoJSON        , callback        ) {
 
 
 		callback = callback || function () {};
@@ -221,7 +221,7 @@ export default class MapStyle {
 	}
 
 
-	getLegendFromStyle(textTitol: string, cssClass: string) {
+	getLegendFromStyle(textTitol        , cssClass        ) {
 
 		const html = this.colorizator.generateHTMLLegendColor(this.legendColors, this.legendRanges,
 			textTitol,
@@ -239,7 +239,7 @@ export default class MapStyle {
 	 * @example MapStyle.getFilterByDefault("temp")
 	 */
 
-	getFilterByDefault(keyField: string) {
+	getFilterByDefault(keyField        ) {
 
 		return ["!=", ["typeof", ["get", keyField]], "null"];
 
@@ -254,7 +254,7 @@ export default class MapStyle {
 	 * @example MapStyle.generateGeoStatisticsFromField("temp")
 	 */
 
-	generateGeoStatisticsFromField(tematicField: string) {
+	generateGeoStatisticsFromField(tematicField        ) {
 
 		try {
 
@@ -285,15 +285,15 @@ export default class MapStyle {
 	 * @returns {object}
 	 */
 
-	createStyleLayer(sourceName: string,
-		layerName: string,
-		keyField: string,
-		type: string,
-		maxzoom: number,
-		minzoom: number,
-		initColor: string,
-		visualization: string,
-		factor: number
+	createStyleLayer(sourceName        ,
+		layerName        ,
+		keyField        ,
+		type        ,
+		maxzoom        ,
+		minzoom        ,
+		initColor        ,
+		visualization        ,
+		factor        
 
 	) {
 
@@ -478,7 +478,7 @@ export default class MapStyle {
 	 * @returns {object}
 	 */
 
-	setStyleFromPreDefinedRamTemperatureHeights(tematicField: string) {
+	setStyleFromPreDefinedRamTemperatureHeights(tematicField        ) {
 
 		const stylePre = ["interpolate", ["exponential", 1],
 			["number", ["get", tematicField]], -25, 0, -10, 10, -5, 15, 0, 100, 2, 200, 4, 400, 8, 800, 10, 1000, 12, 1200, 14, 1400, 16, 1600, 18, 1800, 20, 2000, 22, 2200, 24, 2600, 26, 2800, 28, 3200, 30, 3600, 32, 4000, 34, 4400, 36, 5000, 38, 5500, 40, 6000, 42, 7000, 44, 8000, 46, 9000, 48, 10000, 50, 12000
@@ -496,7 +496,7 @@ export default class MapStyle {
 	 * @returns {object}
 	 */
 
-	setStyleFromPreDefinedRamTemperatureInterpolateHeights(tematicField: string) {
+	setStyleFromPreDefinedRamTemperatureInterpolateHeights(tematicField        ) {
 
 		const stylePre = ["interpolate", ["linear"],
 			["zoom"],
@@ -517,7 +517,7 @@ export default class MapStyle {
 	 * @returns {stylePre}
 	 */
 
-	setStyleTextSizeByFactorSize(factorSize: number) {
+	setStyleTextSizeByFactorSize(factorSize        ) {
 
 		factorSize = factorSize || this.defaultTextFactor;
 
@@ -545,7 +545,7 @@ export default class MapStyle {
 	 *
 	 * @returns {object}
 	 */
-	setStyleFromPreDefinedRamTemperatureColor(tematicField: string) {
+	setStyleFromPreDefinedRamTemperatureColor(tematicField        ) {
 
 		const stylePre = ["interpolate", ["exponential", 1],
 			["number", ["get", tematicField]], -25, "#0000ff", -10, "#68a2ff", -5, "#68d9ff", 0, "#68ffff", 2, "#68ffe0", 4, "#68ff9d", 8, "#7DFF68", 10, "#B2FF2B", 12, "#B6FF29", 14, "#CEFF1B", 16, "#DFFF12", 18, "#F9FF03", 20, "#FFF500", 22, "#FFE200", 24, "#FFCC00", 26, "#ffb600", 28, "#ff9000", 30, "#ff7200", 32, "#ff5000", 34, "#ff3200", 36, "#ff0059", 38, "#ff0059", 40, "#ff0098", 42, "#d30480", 44, "#d004d3", 46, "#d004d3", 48, "#d004d3", 50, "#d004d3"
@@ -565,7 +565,7 @@ export default class MapStyle {
 	 */
 
 
-	setStylesFromPredefinedScales(tematicField: string, scaleName: string) {
+	setStylesFromPredefinedScales(tematicField        , scaleName        ) {
 
 
 		const SCALES = {
@@ -645,7 +645,7 @@ export default class MapStyle {
 	}
 
 
-	setStylesPaintFromColorArray(tematicField: string, colorsArray: object, textHaloColor: boolean = false) {
+	setStylesPaintFromColorArray(tematicField        , colorsArray        , textHaloColor          = false) {
 
 
 		const numRanges = this.colorizator._checkNumRangs(colorsArray.length - 1);
@@ -665,7 +665,7 @@ export default class MapStyle {
 	 * @returns {paintStyle} `this`
 	 * @example MapStyle.setStylesPaintFromRanges("temp",6, "BuGn")
 	 */
-	setStylesPaintFromRanges(tematicField: string, numRanges: number, colorsPalette: string, textHaloColor: boolean = false) {
+	setStylesPaintFromRanges(tematicField        , numRanges        , colorsPalette        , textHaloColor          = false) {
 
 		numRanges = this.colorizator._checkNumRangs(numRanges);
 		const colorsArray = this.colorizator.getColorArrayfromSelectedBrewer(numRanges + 1, colorsPalette);
@@ -684,7 +684,7 @@ export default class MapStyle {
 	 * @example MapStyle.setStylebyFactorHeights("temp",10)
 	 */
 
-	setStylebyFactorHeights(tematicField: string, factorHeight: number) {
+	setStylebyFactorHeights(tematicField        , factorHeight        ) {
 
 		factorHeight = factorHeight || this.defaultHFactor;
 
@@ -727,7 +727,7 @@ export default class MapStyle {
 	}
 
 
-	_generateStylesfromRanges(tematicField: string, numRanges: number, colorsArray: object, textHaloColor: boolean) {
+	_generateStylesfromRanges(tematicField        , numRanges        , colorsArray        , textHaloColor         ) {
 
 
 		if (this.generateGeoStatisticsFromField(tematicField)) {
@@ -805,7 +805,7 @@ export default class MapStyle {
 	 * @returns {string} `this`
 	 * @example MapStyle.getFieldType("temp")
 	 */
-	getFieldType(fieldName: string) {
+	getFieldType(fieldName        ) {
 
 		const type = null;
 		if (this.fieldNames !== null) {
@@ -865,7 +865,7 @@ export default class MapStyle {
 	 */
 
 
-	setStylePaintFromUniquesValues(tematicField: string, initColor: string, endColor: string) {
+	setStylePaintFromUniquesValues(tematicField        , initColor        , endColor        ) {
 
 		const _type = this.getFieldType(tematicField) || "string";
 

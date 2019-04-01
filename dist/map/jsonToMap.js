@@ -1,4 +1,4 @@
-// @flow
+//      
 
 
 import Request from "../request";
@@ -28,7 +28,7 @@ export default class JsonToMap {
 	}
 
 
-	getAsyncConfigJSON(pathJSON: string, callback: object) {
+	getAsyncConfigJSON(pathJSON        , callback        ) {
 
 
 		callback = callback || function () {};
@@ -73,7 +73,7 @@ export default class JsonToMap {
 
 	}
 
-	getAsyncSourceGeoJSONFromPath(pathGeoJSON: string, callback: object) {
+	getAsyncSourceGeoJSONFromPath(pathGeoJSON        , callback        ) {
 
 
 		const geoJsonPath = pathGeoJSON;
@@ -115,7 +115,7 @@ export default class JsonToMap {
 
 	}
 
-	getAsyncSourceGeoJSON(callback: object) {
+	getAsyncSourceGeoJSON(callback        ) {
 
 
 		if (this.JSON !== null && this.JSON.vieweroptions) {
@@ -155,7 +155,7 @@ export default class JsonToMap {
 	}
 
 
-	getOptionsMap(container: string) {
+	getOptionsMap(container        ) {
 
 		const mapOptions = {};
 		if (this.JSON === null) {

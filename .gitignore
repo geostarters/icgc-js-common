@@ -7,6 +7,8 @@ _batfish_tmp
 /dist/ICGCCommon-dev.js
 /dist/ICGCCommon.js
 /dist/ICGCCommon.js.map
+dist
+test_old
 *.js.map
 node_modules
 npm-debug.log
