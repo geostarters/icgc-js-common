@@ -99,23 +99,44 @@ export default class MapboxMap extends Map {
 	 * Removes all the data from the map. Implementation specific
 	 *
 	 */
-	removeMapData() {
+	async removeMapData() {
 
-		Object.keys(this.layerIds).forEach(layer => {
+		/* Object.keys(this.layerIds).forEach(layer => {
 
 			this.map.removeLayer(layer);
 
-		});
+		}); */
+
+		await this.removeDataArray(Object.keys(this.layerIds), this.map.removeLayer);
 
 		this.layerIds = {};
 
-		Object.keys(this.sourceIds).forEach(source => {
+		/* Object.keys(this.sourceIds).forEach(source => {
 
 			this.map.removeSource(source);
 
-		});
+		}); */
+
+		await this.removeDataArray(Object.keys(this.sourceIds), this.map.removeSource);
 
 		this.sourceIds = {};
+
+	}
+
+
+	removeDataArray(arr, fn) {
+
+		return new Promise((resolve) =>{
+
+			for (const item of arr) {
+
+				fn(item);
+
+			}
+
+			resolve();
+
+		});
 
 	}
 
