@@ -1,7 +1,6 @@
 // @flow
 
 import BridgeStatics from "./bridgeStatics";
-import UtilsStatics from "./utilsStatics";
 
 /**
  * Return basic stats from a GeoJson data a title field from geojson properties.
@@ -26,7 +25,6 @@ export default class GeoJSONStatistics {
 		this.keyField = keyField || null;
 		this.bridgeStatics = null;
 		this.stats = {};
-		this.Utils = new UtilsStatics();
 		this.geomType = null;
 		this.maxFetauresToCount = 5000;
 

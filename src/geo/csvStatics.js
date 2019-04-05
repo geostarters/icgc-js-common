@@ -1,7 +1,7 @@
 // @flow
 
 import BridgeStatics from "./bridgeStatics";
-import UtilsStatics from "./utilsStatics";
+import UtilsStats from "./utilsStats";
 
 /**
  * Generate basic statistics from CSV array.
@@ -28,7 +28,6 @@ export default class CSVStatics {
 		this.arrayCSV = arrayCSV;
 		this.bridgeStatics = null;
 		this.stats = {};
-		this.utilsStatistis = new UtilsStatics();
 
 
 		if (this.numCSVColumn !== null && Array.isArray(this.arrayCSV)) {
@@ -107,11 +106,11 @@ export default class CSVStatics {
 				if (i > 0) {
 
 					const feature = dataCSV[i][numColum];
-					if (this.utilsStatistis.checkIfExistsValue(feature)) {
+					if (UtilsStats.checkIfExistsValue(feature)) {
 
 						if (forceToNumber) {
 
-							arrayColum.push(this.utilsStatistis.forceToNumber(feature));
+							arrayColum.push(UtilsStats.forceToNumber(feature));
 
 						} else {
 

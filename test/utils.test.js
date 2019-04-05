@@ -12,6 +12,20 @@ describe("Utils", () => {
 
 	});
 
+	it("#applyFunctoDataArray", () => {
+
+		/* 		expect-assertions(1);
+
+		fucntion addNumber() {
+
+		}
+
+		const res = [0];
+		Utils.applyFunctoDataArray([1, 2, 3, 4], (item) => res[0] = res[0] +  item);
+		expect(res).toEqual(10); */
+
+	});
+
 	it("#invertColor", () => {
 
 		const colorIn = "#000000";

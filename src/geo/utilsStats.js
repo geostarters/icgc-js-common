@@ -2,17 +2,12 @@
 
 
 /**
- * A `UtilsStatics` object represents a.
- *
- * @example
- * var utils = new UtilsStatics();
+ * Classe d'utils dades estadístiques
  */
-export default class UtilsStatics {
+export default class UtilsStats {
 
 
-	constructor() {}
-
-	forceToNumber(valor) {
+	static forceToNumber(valor) {
 
 		if (!isNaN(parseFloat(valor)) && typeof (valor) === "string") {
 
@@ -30,7 +25,7 @@ export default class UtilsStatics {
 
 	}
 
-	checkArrayValues(arrayColumn) {
+	static checkArrayValues(arrayColumn) {
 
 		const newArray = [];
 		for (let i = 0; i < arrayColumn.length; i++) {
@@ -46,7 +41,7 @@ export default class UtilsStatics {
 
 	}
 
-	converToNumberIfPossible(valor, decimals) {
+	static converToNumberIfPossible(valor, decimals) {
 
 		const precision = decimals || 0;
 		let _newValor = valor;
@@ -69,13 +64,13 @@ export default class UtilsStatics {
 
 	}
 
-	checkType(value) {
+	static checkType(value) {
 
 		return typeof value;
 
 	}
 
-	checkIfExistsValue(value) {
+	static checkIfExistsValue(value) {
 
 		if (typeof value !== "undefined" &&
 			value !== null &&
@@ -94,5 +89,5 @@ export default class UtilsStatics {
 	}
 
 
-} //ebd class
+}
 

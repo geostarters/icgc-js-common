@@ -5,7 +5,6 @@ import GeoExtent from "geojson-extent";
 import Colorizator from "../color/colorizator";
 import GeoJSONStatics from "../geo/GeoJSONStatics";
 import BridgeStatics from "../geo/BridgeStatics";
-import UtilsStatics from "../geo/UtilsStatics";
 import Request from "../Request";
 
 
@@ -22,7 +21,6 @@ export default class MapStyle {
 	constructor(geoJSON: object) {
 
 		this.colorizator = new Colorizator();
-		this.Utils = new UtilsStatics();
 		this.geoExtent = null;
 		this.legendColors = [];
 		this.legendRanges = [];
