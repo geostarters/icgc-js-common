@@ -6,7 +6,7 @@ _batfish_tmp
 /docs/**/*
 
 
-*/dist/ICGCCommon.js
+/dist
 
 test_old
 *.js.map
