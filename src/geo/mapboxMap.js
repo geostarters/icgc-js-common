@@ -1,6 +1,7 @@
 // @flow
 
 import Map from "./map.js";
+import Utils from "../utils";
 
 /**
  * Map using the mapbox backend
@@ -77,68 +78,54 @@ export default class MapboxMap extends Map {
 	 * @param {MapData} data
 	 * @see Map::addData
 	 */
-	addMapData(data: MapData) {
+	async addMapData(data: MapData) {
 
-		data.sources.forEach(source => {
+		/* data.sources.forEach(source => {
 
 			this.map.addSource(source.name, source.data);
 			this.sourceIds[source.name] = "";
 
+		}); */
+
+		await Utils.applyFunctoDataArray(data.sources, (source) => {
+
+			this.map.addSource(source.id, source);
+			this.sourceIds[source.id] = "";
+
 		});
 
-		data.layers.forEach(layer => {
+		await Utils.applyFunctoDataArray(data.layers, (layer) => {
 
 			this.map.addLayer(layer);
 			this.layerIds[layer.id] = "";
 
 		});
 
+		/* data.layers.forEach(layer => {
+
+			this.map.addLayer(layer);
+			this.layerIds[layer.id] = "";
+
+		}); */
+
 	}
 
 	/**
-	 * Removes all the data from the map. Implementation specific
+	 * Removes all the data (sources and layers) from the map. Implementation specific
 	 *
 	 */
 	async removeMapData() {
 
-		/* Object.keys(this.layerIds).forEach(layer => {
-
-			this.map.removeLayer(layer);
-
-		}); */
-
-		await this.removeDataArray(Object.keys(this.layerIds), this.map.removeLayer);
+		await Utils.applyFunctoDataArray(Object.keys(this.layerIds), this.map.removeLayer);
 
 		this.layerIds = {};
 
-		/* Object.keys(this.sourceIds).forEach(source => {
-
-			this.map.removeSource(source);
-
-		}); */
-
-		await this.removeDataArray(Object.keys(this.sourceIds), this.map.removeSource);
+		await Utils.applyFunctoDataArray(Object.keys(this.sourceIds), this.map.removeSource);
 
 		this.sourceIds = {};
 
 	}
 
-
-	removeDataArray(arr, fn) {
-
-		return new Promise((resolve) =>{
-
-			for (const item of arr) {
-
-				fn(item);
-
-			}
-
-			resolve();
-
-		});
-
-	}
 
 	/**
 	 * Checks if the sourceName exists in the map
@@ -307,9 +294,9 @@ export default class MapboxMap extends Map {
 
 	}
 
-	addSource(id, source) {
+	addSource(source) {
 
-		this.map.addSource(id, source);
+		this.map.addSource(source.id, source);
 
 	}
 

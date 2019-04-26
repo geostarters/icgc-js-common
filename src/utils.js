@@ -3,18 +3,42 @@
 export default class Utils {
 
 	/**
- *Remove the item at the specified position
- *
- * @param {array} items array.
- * @param {number} position position of the element to remove, starting from 1.
- * @returns {array} return a new array, without modifying the original
- *
- */
+	 *Remove the item at the specified position
+	*
+	* @param {array} items array.
+	* @param {number} position position of the element to remove, starting from 1.
+	* @returns {array} return a new array, without modifying the original
+	*
+	*/
 	static removeItem(items, position) {
 
 		const copyItems = [...items];
 		copyItems.splice(position - 1, 1);
 		return copyItems;
+
+	}
+
+	/**
+	 *Remove the item at the specified position
+	*
+	* @param {array} arr array.
+	* @param {function} fn function to apply to each item of the array
+	* @returns {array} return a new array, without modifying the original
+	*
+	*/
+	static applyFunctoDataArray(arr, fn) {
+
+		return new Promise(async (resolve) =>{
+
+			for (const item of arr) {
+
+				await fn(item);
+
+			}
+
+			resolve();
+
+		});
 
 	}
 

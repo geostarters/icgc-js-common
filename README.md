@@ -77,3 +77,6 @@ __src:__ Contains an index file that requires all the modules that should be exp
 __test:__ Contains the unit and integration tests
 
 ## License
+
+Copyright (c) 2019 - Geostarters (MIT License)
+See LICENSE file for more info.

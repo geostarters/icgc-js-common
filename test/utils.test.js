@@ -12,6 +12,18 @@ describe("Utils", () => {
 
 	});
 
+	it("#applyFunctoDataArray", async () => {
+
+		expect.assertions(1);
+
+		const baseObject = [0, 0, 0];
+		const obj = [0, 1, 2];
+
+		await Utils.applyFunctoDataArray(obj, (item) => baseObject[item]++);
+		expect(baseObject).toEqual([1, 1, 1]);
+
+	});
+
 	it("#invertColor", () => {
 
 		const colorIn = "#000000";

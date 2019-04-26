@@ -1,7 +1,7 @@
 // @flow
 
 import BridgeStatics from "./bridgeStatics";
-import UtilsStatics from "./utilsStatics";
+import UtilsStats from "./utilsStats";
 
 
 /**
@@ -24,11 +24,10 @@ class ArrayStatics {
 		this.arrayColumn = arrayColumn;
 		this.bridgeStatics = null;
 		this.stats = {};
-		this.utilsStatistis = new UtilsStatics();
 
 		if (this.arrayColumn !== null && Array.isArray(this.arrayColumn)) {
 
-			this.bridgeStatics = new BridgeStatics(this.utilsStatistis.checkArrayValues(this.arrayColumn));
+			this.bridgeStatics = new BridgeStatics(UtilsStats.checkArrayValues(this.arrayColumn));
 
 		} else {
 

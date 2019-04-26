@@ -12,7 +12,7 @@ import ArrayStatics from "./geo/arrayStatics";
 import BridgeStatics from "./geo/bridgeStatics";
 import CsvStatics from "./geo/csvStatics";
 import GeoJSONStatics from "./geo/geoJSONStatics";
-import UtilsStatics from "./geo/utilsStatics";
+import UtilsStats from "./geo/utilsStats";
 
 export {
 	LatLon,
@@ -27,5 +27,5 @@ export {
 	BridgeStatics,
 	CsvStatics,
 	GeoJSONStatics,
-	UtilsStatics
+	UtilsStats
 };

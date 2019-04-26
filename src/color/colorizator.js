@@ -3,7 +3,7 @@
 "use strict";
 
 import Chroma from "chroma-js";
-import UtilsStatics from "../geo/utilsStatics";
+import utilsStats from "../geo/utilsStats";
 
 /**
  * A `Colorizator` object represents a given latitude and longitude coordinates.
@@ -24,7 +24,6 @@ export default class Colorizator {
 		this.maxBrewerPalettes = this.palettes.length - 1;
 		this.maxRangsColor = 9;
 		this.defaultNumber = 5;
-		this.Utils = new UtilsStatics();
 
 	}
 
@@ -284,7 +283,7 @@ export default class Colorizator {
 			if (typeof textRanges === "string" && textRanges.indexOf("-") !== -1) {
 
 				textPart = textRanges.split("-");
-				leftTextPart = this.Utils.converToNumberIfPossible(textPart[0].trim(), 0);
+				leftTextPart = this.utilsStats.converToNumberIfPossible(textPart[0].trim(), 0);
 
 				html = `${html}<div style="float:left;width:${percent}%" class="w-15">` +
 					`<div style="font-size:0.85em">${leftTextPart}`;
