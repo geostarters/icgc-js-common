@@ -107,11 +107,11 @@ export default class Map {
 	 *
 	 * @param {MapData} data
 	 */
-	setData(data: MapData) {
+	async setData(data: MapData) {
 
 		if (this.isLoaded) {
 
-			this.removeMapData();
+			await this.removeMapData();
 			this.addMapData(data);
 
 		} else {

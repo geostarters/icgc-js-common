@@ -89,8 +89,8 @@ export default class MapboxMap extends Map {
 
 		await Utils.applyFunctoDataArray(data.sources, (source) => {
 
-			this.map.addSource(source);
-			this.sourceIds[source.name] = "";
+			this.map.addSource(source.id, source);
+			this.sourceIds[source.id] = "";
 
 		});
 

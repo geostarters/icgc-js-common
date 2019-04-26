@@ -12,17 +12,15 @@ describe("Utils", () => {
 
 	});
 
-	it("#applyFunctoDataArray", () => {
+	it("#applyFunctoDataArray", async () => {
 
-		/* 		expect-assertions(1);
+		expect.assertions(1);
 
-		fucntion addNumber() {
+		const baseObject = [0, 0, 0];
+		const obj = [0, 1, 2];
 
-		}
-
-		const res = [0];
-		Utils.applyFunctoDataArray([1, 2, 3, 4], (item) => res[0] = res[0] +  item);
-		expect(res).toEqual(10); */
+		await Utils.applyFunctoDataArray(obj, (item) => baseObject[item]++);
+		expect(baseObject).toEqual([1, 1, 1]);
 
 	});
 
