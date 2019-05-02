@@ -10,4 +10,13 @@ describe("Class Colorizator", () => {
 
 	});
 
+	it("#getHslNiceColor", () => {
+
+		const colorIn = "#fff";
+		const colorizator = new Colorizator();
+		const colorOut = colorizator.getHslNiceColor(colorIn);
+		expect(colorOut).toBe("hsl(NaN,50%,50%)");
+
+	});
+
 });
