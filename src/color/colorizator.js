@@ -147,6 +147,22 @@ export default class Colorizator {
 	}
 
 
+	/**
+	 * Gets de HSL contrast color from a given color
+	 * @param {string} hex
+	 * @returns {string} `this`
+	 */	
+	getHslNiceColor(hex) {
+		const hsl = Chroma(hex).hsl();
+		hsl[0] = (hsl[0] + 0.5) % 1; // Hue
+		hsl[1] = (hsl[1] + 0.5) % 1; // Saturation
+		hsl[2] = (hsl[2] + 0.5) % 1; // Luminocity
+		return `hsl(${hsl[0] * 360},${hsl[1] * 100}%,${hsl[2] * 100}%)`;
+	}
+
+
+
+
 	_checkNumRangs(numRangs: number) {
 
 		if (typeof numRangs === "number") {
