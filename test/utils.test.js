@@ -49,4 +49,93 @@ describe("Utils", () => {
 
 	});
 
+	it("#isEmptyObject", () => {
+
+		const emptyObject = {};
+		expect(Utils.isEmptyObject(emptyObject)).toEqual(true);
+
+	});
+
+	it("#deBounce not called immediately", () => {
+
+		let hasHappened = false;
+
+		const mockFunc = ()=>{
+
+			hasHappened = true;
+
+		};
+
+		const fn = Utils.debounce(mockFunc, 100);
+
+		expect(hasHappened).toBe(false);
+
+		fn();
+
+		expect(hasHappened).toBe(false);
+
+	});
+
+	it("#deBounce called only 1 time", () => {
+
+		jest.useFakeTimers();
+
+		const func = jest.fn();
+		const debouncedFunc = Utils.debounce(func, 1000);
+
+
+		for (let i = 0; i < 100; i++) {
+
+			debouncedFunc();
+
+		}
+
+		// fast-forward time
+		jest.runAllTimers();
+
+		expect(func).toBeCalledTimes(1);
+
+
+	});
+
+	it("#debounceImmediate not called immediately", () => {
+
+		let hasHappened = false;
+
+		const mockFunc = ()=>{
+
+			hasHappened = true;
+
+		};
+
+		const fn = Utils.debounceImmediate(mockFunc, 100);
+
+		expect(hasHappened).toBe(false);
+
+		fn();
+
+		expect(hasHappened).toBe(false);
+
+	});
+
+	it("#debounceImmediate called immediately", () => {
+
+		let hasHappened = false;
+
+		const mockFunc = ()=>{
+
+			hasHappened = true;
+
+		};
+
+		const fn = Utils.debounceImmediate(mockFunc, 100, true);
+
+		expect(hasHappened).toBe(false);
+
+		fn();
+
+		expect(hasHappened).toBe(true);
+
+	});
+
 });
