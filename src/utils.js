@@ -19,26 +19,21 @@ export default class Utils {
 	}
 
 	/**
-	 *Remove the item at the specified position
+	*Apply a function to each item of the array
 	*
 	* @param {array} arr array.
 	* @param {function} fn function to apply to each item of the array
-	* @returns {array} return a new array, without modifying the original
 	*
 	*/
-	static applyFunctoDataArray(arr, fn) {
+	static async applyFunctoDataArray(arr, fn) {
 
-		return new Promise(async (resolve) =>{
+		for (const item of arr) {
 
-			for (const item of arr) {
+			await fn(item);
 
-				await fn(item);
+		}
 
-			}
-
-			resolve();
-
-		});
+		return null;
 
 	}
 
@@ -89,7 +84,7 @@ export default class Utils {
 
 		for (const key in obj) {
 
-			if (obj.hasOwnProperty(key)) {
+			if (Object.prototype.hasOwnProperty.call(obj, key)) {
 
 				return false;
 
@@ -113,8 +108,8 @@ export default class Utils {
 
 		return function() {
 
-			const context = this;
-			const args = arguments;
+			const context = this; // eslint-disable-line no-invalid-this
+			const args = arguments; // eslint-disable-line prefer-rest-params
 
 			clearTimeout(timer);
 			timer = setTimeout(() => fn.apply(context, args), delay);
@@ -135,11 +130,10 @@ export default class Utils {
 
 		let timeout;
 
-
 		return function() {
 
-			const context = this;
-			const args = arguments;
+			const context = this; // eslint-disable-line no-invalid-this
+			const args = arguments; // eslint-disable-line prefer-rest-params
 
 			// Should the function be called now? If immediate is true
 			//   and not already in a timeout then the answer is: Yes

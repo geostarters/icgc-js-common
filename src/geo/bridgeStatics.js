@@ -1,6 +1,5 @@
 // @flow
 
-
 import GeoStats from "geostats";
 /**
  * A `BridgeStatics` object represents a given latitude and longitude coordinates.

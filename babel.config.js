@@ -10,5 +10,5 @@ module.exports = {
 			},
 		],
 	],
-	"plugins": ["transform-flow-strip-types"]
+	"plugins": ["@babel/transform-flow-strip-types"]
 };

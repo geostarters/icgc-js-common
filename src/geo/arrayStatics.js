@@ -1,7 +1,7 @@
 // @flow
 
 import BridgeStatics from "./bridgeStatics";
-import UtilsStats from "./utilsStats";
+import UtilsStats from "./utilsStatics";
 
 
 /**
@@ -15,17 +15,15 @@ import UtilsStats from "./utilsStats";
  */
 class ArrayStatics {
 
-
 	arrayColumn: Array<number> ;
 
 	constructor(arrayColumn: Array<number>) {
-
 
 		this.arrayColumn = arrayColumn;
 		this.bridgeStatics = null;
 		this.stats = {};
 
-		if (this.arrayColumn !== null && Array.isArray(this.arrayColumn)) {
+		if (this.arrayColumn !== null && Array.isArray(this.arrayColumn) && this.arrayColumn.length) {
 
 			this.bridgeStatics = new BridgeStatics(UtilsStats.checkArrayValues(this.arrayColumn));
 
@@ -69,7 +67,6 @@ class ArrayStatics {
 
 		return this.stats;
 
-
 	}
 
 
@@ -86,6 +83,7 @@ class ArrayStatics {
 		if (typeof numRanges === "number" && Array.isArray(arrayColors)) {
 
 			this.stats = {
+
 				"classification": this.bridgeStatics.setClassificationStats(numRanges),
 				"colors": this.bridgeStatics.setColorstoStats(arrayColors),
 				"basics": this.bridgeStatics.getBasicsStats()

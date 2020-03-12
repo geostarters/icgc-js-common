@@ -3,7 +3,7 @@
 "use strict";
 
 import Chroma from "chroma-js";
-import utilsStats from "../geo/utilsStats";
+import utilsStats from "../geo/utilsStatics";
 
 /**
  * A `Colorizator` object represents a given latitude and longitude coordinates.

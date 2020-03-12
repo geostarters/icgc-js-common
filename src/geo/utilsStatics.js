@@ -4,7 +4,7 @@
 /**
  * Classe d'utils dades estadístiques
  */
-export default class UtilsStats {
+export default class UtilsStatics {
 
 
 	static forceToNumber(valor) {

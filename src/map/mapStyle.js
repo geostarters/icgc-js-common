@@ -1,10 +1,11 @@
 // @flow
 
-import GeoExtent from "geojson-extent";
+import GeoExtent from "@mapbox/geojson-extent";
 
 import Colorizator from "../color/colorizator";
 import GeoJSONStatics from "../geo/GeoJSONStatics";
 import BridgeStatics from "../geo/BridgeStatics";
+import UtilsStatics from "../geo/utilsStatics";
 import Request from "../Request";
 
 
@@ -16,7 +17,6 @@ import Request from "../Request";
  * const geo = new MapStyle(geojson);
  */
 export default class MapStyle {
-
 
 	constructor(geoJSON: object) {
 
@@ -57,9 +57,7 @@ export default class MapStyle {
 
 	}
 
-
 	getAsyncGeoJSON(pathGeoJSON: string, callback: object) {
-
 
 		callback = callback || function () {};
 
@@ -68,7 +66,6 @@ export default class MapStyle {
 			if ((pathGeoJSON !== null && typeof pathGeoJSON === "string")) {
 
 				Request.get(pathGeoJSON).then((res) => {
-
 
 					this.geoJSON = res;
 					this.geomType = this.getGeomTypeFromGeoJSON();
@@ -81,7 +78,6 @@ export default class MapStyle {
 					resolve(res);
 					return callback(res);
 
-
 				}).catch((error) => {
 
 					reject(error);
@@ -92,16 +88,14 @@ export default class MapStyle {
 			} else {
 
 				///throw new Error("No GeoJSON path found");
-				reject({
+				reject(new Error({
 					"statusCode": 100,
 					"msg": "No GeoJSON path found"
-				});
-
+				}));
 
 			}
 
 		}));
-
 
 	}
 
@@ -154,7 +148,6 @@ export default class MapStyle {
 				for (const field in feature.properties) {
 
 					items.push(field);
-					//items.push([{"name":field, "type":this.Utils.checkType(feature.properties[field][0])}]);
 
 				}
 
@@ -170,7 +163,7 @@ export default class MapStyle {
 
 						listFields.push({
 							"name": nameFields[y],
-							"type": this.Utils.checkType(this.geoJSON.features[0].properties[nameFields[y]])
+							"type": UtilsStatics.checkType(this.geoJSON.features[0].properties[nameFields[y]])
 						});
 
 					}
@@ -313,8 +306,8 @@ export default class MapStyle {
 				"source": sourceName,
 				"interactive": true,
 				"type": "circle",
-				"minzoom": minzoom,
-				"maxzoom": maxzoom,
+				minzoom,
+				maxzoom,
 				"paint": {
 					"circle-color": initColor,
 					"circle-radius": [
@@ -339,8 +332,8 @@ export default class MapStyle {
 				"source": sourceName,
 				"interactive": true,
 				"type": "fill-extrusion",
-				"minzoom": minzoom,
-				"maxzoom": maxzoom,
+				minzoom,
+				maxzoom,
 				"paint": {
 					"fill-extrusion-opacity": 0.9,
 					"fill-extrusion-color": initColor,
@@ -359,8 +352,8 @@ export default class MapStyle {
 				"source": sourceName,
 				"interactive": true,
 				"type": "symbol",
-				"minzoom": minzoom,
-				"maxzoom": maxzoom,
+				minzoom,
+				maxzoom,
 				"text-allow-overlap": true,
 				"text-ignore-placement": true,
 				"symbol-spacing": 10,
@@ -400,8 +393,8 @@ export default class MapStyle {
 				"source": sourceName,
 				"interactive": true,
 				"type": "line",
-				"minzoom": minzoom,
-				"maxzoom": maxzoom,
+				minzoom,
+				maxzoom,
 				"layout": {
 					"line-join": "round",
 					"line-cap": "round"
@@ -423,8 +416,8 @@ export default class MapStyle {
 				"source": sourceName,
 				"interactive": true,
 				"type": "fill",
-				"minzoom": minzoom,
-				"maxzoom": maxzoom,
+				minzoom,
+				maxzoom,
 				"paint": {
 					"fill-opacity": 0.9,
 					"fill-color": initColor
@@ -442,8 +435,8 @@ export default class MapStyle {
 				"source": sourceName,
 				"interactive": true,
 				"type": "circle",
-				"minzoom": minzoom,
-				"maxzoom": maxzoom,
+				minzoom,
+				maxzoom,
 				"paint": {
 					"circle-color": "#ff0000",
 					"circle-radius": [
@@ -699,7 +692,7 @@ export default class MapStyle {
 		const object = {};
 
 
-		array1.forEach(item => {
+		array1.forEach((item) => {
 
 			if (!object[item]) {
 

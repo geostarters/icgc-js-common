@@ -1,6 +1,5 @@
 // @flow
 
-
 import Request from "../request";
 
 /**
@@ -10,10 +9,7 @@ import Request from "../request";
  * Sample;
  	const jsonToMap = new JsonToMap();
  */
-
-
 export default class JsonToMap {
-
 
 	constructor() {
 
@@ -27,9 +23,7 @@ export default class JsonToMap {
 
 	}
 
-
 	getAsyncConfigJSON(pathJSON: string, callback: object) {
-
 
 		callback = callback || function () {};
 
@@ -53,19 +47,16 @@ export default class JsonToMap {
 			} else {
 
 				///throw new Error("No GeoJSON path found");
-				reject({
+				reject(new Error({
 					"statusCode": 100,
 					"msg": "Invalid parameters provided: in pathJSON"
-				});
-
+				}));
 
 			}
 
 		}));
 
-
 	}
-
 
 	getConfigJSON() {
 
@@ -75,7 +66,6 @@ export default class JsonToMap {
 
 	getAsyncSourceGeoJSONFromPath(pathGeoJSON: string, callback: object) {
 
-
 		const geoJsonPath = pathGeoJSON;
 
 		callback = callback || function () {};
@@ -83,7 +73,6 @@ export default class JsonToMap {
 		return new Promise((resolve, reject) => {
 
 			if ((pathGeoJSON !== null && typeof pathGeoJSON === "string")) {
-
 
 				Request.get(geoJsonPath).then((res) => {
 
@@ -98,25 +87,21 @@ export default class JsonToMap {
 
 				});
 
-
 			} else {
 
 				///throw new Error("No GeoJSON path found");
-				reject({
+				reject(new Error({
 					"statusCode": 100,
 					"msg": "No valid url"
-				});
-
+				}));
 
 			}
 
 		});
 
-
 	}
 
 	getAsyncSourceGeoJSON(callback: object) {
-
 
 		if (this.JSON !== null && this.JSON.vieweroptions) {
 
@@ -154,13 +139,11 @@ export default class JsonToMap {
 
 	}
 
-
 	getOptionsMap(container: string) {
 
 		const mapOptions = {};
 		if (this.JSON === null) {
 
-			//this.defaultMapOptions.container = container;
 			console.info(this.defaultMapOptions);
 			return this.defaultMapOptions;
 
@@ -189,6 +172,5 @@ export default class JsonToMap {
 		}
 
 	}
-
 
 }

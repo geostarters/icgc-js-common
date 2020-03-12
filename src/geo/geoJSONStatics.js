@@ -1,6 +1,7 @@
 // @flow
 
 import BridgeStatics from "./bridgeStatics";
+import UtilsStatics from "./utilsStatics";
 
 /**
  * Return basic stats from a GeoJson data a title field from geojson properties.
@@ -33,14 +34,11 @@ export default class GeoJSONStatistics {
 
 			this.bridgeStatics = new BridgeStatics(this.getColumnFromGEOJSON(this.keyField, this.geoJSON));
 
-
 		} else {
-
 
 			throw new Error("Invalid parameters provided: geoJSON AND keyField");
 
 		}
-
 
 	} //end constructor
 
@@ -103,21 +101,20 @@ export default class GeoJSONStatistics {
 		const items = [];
 		let _count = 0;
 
-		if (this.geoJSON !== null && typeof this.geoJSON === "object" && this.keyField !== null) {
+		if (GeoJSON !== null && typeof GeoJSON === "object" && this.keyField !== null) {
 
-			const _type =	this.Utils.checkType(this.geoJSON.features[0].properties[keyField]);
-
+			const _type =	UtilsStatics.checkType(GeoJSON.features[0].properties[keyField]);
 
 			for (const key in GeoJSON.features) {
 
 				if (_count < this.maxFetauresToCount) {
 
 					const feature = GeoJSON.features[key];
-					if (this.Utils.checkIfExistsValue(feature.properties[keyField])) {
+					if (UtilsStatics.checkIfExistsValue(feature.properties[keyField])) {
 
 						if (forceNumber) {
 
-							items.push(this.Utils.forceToNumber(feature.properties[keyField]));
+							items.push(UtilsStatics.forceToNumber(feature.properties[keyField]));
 
 						} else if (!forceNumber && _type === "string" && !isNaN(parseInt(feature.properties[keyField])))	{
 
@@ -136,12 +133,10 @@ export default class GeoJSONStatistics {
 				_count = _count + 1;
 
 			}
-			//console.info(items);
 
 			return items;
 
 		} else {
-
 
 			throw new Error("Invalid parameters provided: geoJSON AND keyField");
 
@@ -166,7 +161,7 @@ export default class GeoJSONStatistics {
 		for (const key in GeoJSON.features) {
 
 			const feature = GeoJSON.features[key];
-			if (this.Utils.checkIfExistsValue(feature.properties[keyField])) {
+			if (UtilsStatics.checkIfExistsValue(feature.properties[keyField])) {
 
 				if (feature.properties[keyFilter] < valueFilter) {
 

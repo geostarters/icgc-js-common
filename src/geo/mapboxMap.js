@@ -387,11 +387,11 @@ export default class MapboxMap extends Map {
 
 		if (layerName.trim() !== "") {
 
-			this.map.on(eventName, layerName, (e) => callback(e, layerName));
+			this.map.on(eventName, layerName, e => callback(e, layerName));
 
 		} else {
 
-			this.map.on(eventName, (e) => callback(e));
+			this.map.on(eventName, e => callback(e));
 
 		}
 

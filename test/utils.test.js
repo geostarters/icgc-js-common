@@ -19,7 +19,7 @@ describe("Utils", () => {
 		const baseObject = [0, 0, 0];
 		const obj = [0, 1, 2];
 
-		await Utils.applyFunctoDataArray(obj, (item) => baseObject[item]++);
+		await Utils.applyFunctoDataArray(obj, item => baseObject[item]++);
 		expect(baseObject).toEqual([1, 1, 1]);
 
 	});
@@ -60,7 +60,7 @@ describe("Utils", () => {
 
 		let hasHappened = false;
 
-		const mockFunc = ()=>{
+		const mockFunc = () => {
 
 			hasHappened = true;
 
@@ -102,7 +102,7 @@ describe("Utils", () => {
 
 		let hasHappened = false;
 
-		const mockFunc = ()=>{
+		const mockFunc = () => {
 
 			hasHappened = true;
 
@@ -122,7 +122,7 @@ describe("Utils", () => {
 
 		let hasHappened = false;
 
-		const mockFunc = ()=>{
+		const mockFunc = () => {
 
 			hasHappened = true;
 

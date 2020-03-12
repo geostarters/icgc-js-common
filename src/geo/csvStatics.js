@@ -1,7 +1,7 @@
 // @flow
 
 import BridgeStatics from "./bridgeStatics";
-import UtilsStats from "./utilsStats";
+import UtilsStats from "./utilsStatics";
 
 /**
  * Generate basic statistics from CSV array.
@@ -22,7 +22,6 @@ export default class CSVStatics {
 
 
 	constructor(arrayCSV: Array<number>, numCSVColumn: number) {
-
 
 		this.numCSVColumn = numCSVColumn;
 		this.arrayCSV = arrayCSV;
@@ -92,7 +91,6 @@ export default class CSVStatics {
 	 * @param {array} dataCSV
 	 * @returns {array} `this`
 	 */
-
 
 	getColumFromCSV(numColum: number, dataCSV: Array<number>, forceToNumber: boolean = false) {
 
