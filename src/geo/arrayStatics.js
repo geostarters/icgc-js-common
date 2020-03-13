@@ -15,8 +15,6 @@ import UtilsStats from "./utilsStatics";
  */
 class ArrayStatics {
 
-	arrayColumn: Array<number> ;
-
 	constructor(arrayColumn: Array<number>) {
 
 		this.arrayColumn = arrayColumn;

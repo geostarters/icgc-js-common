@@ -9,11 +9,6 @@
  */
 export default class Map {
 
-	options: MapOptions;
-	isInitialized: boolean;
-	isLoaded: boolean;
-	map: Object;
-
 	constructor(options: MapOptions) {
 
 		this.options = options;

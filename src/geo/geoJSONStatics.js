@@ -15,10 +15,6 @@ const geoSattics= new GeoJSONStatics(geoJSON, keyField)
  */
 export default class GeoJSONStatistics {
 
-
-	geoJSON: object;
-	keyField: string;
-
 	constructor(geoJSON: object, keyField: string) {
 
 

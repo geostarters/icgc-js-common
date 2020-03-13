@@ -12,10 +12,6 @@ import Utils from "../utils";
  */
 export default class MapboxMap extends Map {
 
-	apiKey: string;
-	layerIds: Object;
-	sourceIds: Object;
-
 	static ATTRIBUTION_CONTROL: 1;
 	static POPUP_CONTROL: 2;
 	static ZOOM_CONTROL: 3;

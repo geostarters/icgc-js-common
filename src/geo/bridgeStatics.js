@@ -11,9 +11,6 @@ import GeoStats from "geostats";
  */
 export default class BridgeStatics {
 
-	arrayColumn: Array<number> ;
-	geoStats: object;
-
 	constructor(arrayColumn: Array<number>) {
 
 

@@ -11,9 +11,6 @@
  */
 export default class LatLon {
 
-	lat: number;
-	lon: number;
-
 	constructor(lat: number, lon: number) {
 
 		const areNumbers = !(isNaN(lat) || isNaN(lon));

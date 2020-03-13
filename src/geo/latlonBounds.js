@@ -16,9 +16,6 @@ import LatLon from "./latlon";
  */
 export default class LatLonBounds {
 
-	ne: LatLon;
-	sw: LatLon;
-
 	constructor(sw: LatLon, ne: LatLon) {
 
 		this.setNorthEastCorner(ne);
