@@ -12,10 +12,6 @@ import Utils from "../utils";
  */
 export default class MapboxMap extends Map {
 
-	static ATTRIBUTION_CONTROL: 1;
-	static POPUP_CONTROL: 2;
-	static ZOOM_CONTROL: 3;
-
 	constructor(mapboxObject: Object, apiKey: ?string, options: ?MapOptions) {
 
 		const defaultParameters = {
