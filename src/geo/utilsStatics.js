@@ -1,6 +1,5 @@
 // @flow
 
-
 /**
  * Classe d'utils dades estadístiques
  */
@@ -19,7 +18,6 @@ export default class UtilsStatics {
 			valor = -100;
 
 		}
-
 
 		return valor;
 
