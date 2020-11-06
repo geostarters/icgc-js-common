@@ -49,6 +49,7 @@
     "@babel/plugin-transform-flow-strip-types": "^7.8.3",
     "@babel/plugin-transform-modules-commonjs": "^7.4.0",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
     "@geostarters/eslint-config": "0.0.6",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "10.0.3",
@@ -77,8 +78,7 @@
     "rimraf": "^3.0.2",
     "unassertify": "^2.1.0",
     "unflowify": "^1.0.1",
-    "watchify": "^3.10.0",
-    "@babel/preset-flow": "^7.0.0"
+    "watchify": "^3.10.0"
   },
   "browserify": {
     "transform": [
@@ -114,6 +114,6 @@
     "geostats": "^1.8.0"
   },
   "peerDependencies": {
-    "mapbox-gl": "^1.8.1"
+    "mapbox-gl": "^1.12.0"
   }
 }
