@@ -13,6 +13,16 @@ describe("Test the Utils functions", () => {
 
 	});
 
+	test("getPolygonIntersectPoint idmunidistri should return 08184600", async () => {
+
+		const dades = await loadData();
+		const feature = await GeoUtils.getPolygonIntersectPoint([2, 41.5], dades);
+		expect(feature).not.toHaveLength(0);
+		expect(feature).toHaveLength(1);
+		expect(feature[0].properties.idmunidistri).toBe("08184600");
+
+	});
+
 	test("toMercatorBbox should return a bbox", async () => {
 
 		const bboxRect = [

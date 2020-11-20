@@ -25,6 +25,23 @@ export default class GeoUtils {
 
 	}
 
+	static getPolygonIntersectPoint(point: Array<number>, features: Array<Object>) {
+
+		const pt = turf.point(point);
+		const featData = [];
+		for (const feat of features) {
+
+			if (turf.booleanPointInPolygon(pt, feat)) {
+
+				featData.push(feat);
+
+			}
+
+		}
+		return featData;
+
+	}
+
 	static toMercatorBbox(point: Array<number>) {
 
 		const circle = turf.circle(point, 0.5);
