@@ -109,7 +109,7 @@
   "dependencies": {
     "@mapbox/geojson-extent": "^0.3.2",
     "@turf/turf": "^5.1.6",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chroma-js": "^2.1.0",
     "geostats": "^1.8.0"
   },
