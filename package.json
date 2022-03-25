@@ -2,7 +2,7 @@
   "name": "@geostarters/common",
   "homepage": "https://github.com/geostarters/icgc-js-common",
   "bugs": "https://github.com/geostarters/icgc-js-common/issues",
-  "version": "0.3.3",
+  "version": "0.3.7",
   "description": "ICGC JS common",
   "author": "@geostarters",
   "main": "dist/commonjs/index.js",
@@ -114,6 +114,6 @@
     "geostats": "^1.8.0"
   },
   "peerDependencies": {
-    "mapbox-gl": "^1.12.0"
+    "mapbox-gl": "^2.7.1"
   }
 }

@@ -298,6 +298,17 @@ export default class MapboxMap extends Map {
 
 	}
 
+	setTerrain(source) {
+
+		if (this.map.setTerrain(source)) {
+
+			this.map.setTerrain(source);
+
+		}
+
+	}
+
+
 	setPaintProperty(layer, property, data) {
 
 		if (this.map.getPaintProperty(layer, property)) {
