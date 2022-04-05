@@ -26,6 +26,13 @@ const Utils =  require("@geostarters/common");
 ```
 
 
+## DOCUMENTATION
+
+[DOCS API](api.md)
+
+
+
+
 Besides it,  it is generated a single file package and its .map, using [browserify](http://browserify.org/):
 
   **dist/ICGCCommon.js**

@@ -14,6 +14,7 @@ import CsvStatics from "./geo/csvStatics";
 import GeoJSONStatics from "./geo/geoJSONStatics";
 import UtilsStats from "./geo/utilsStatics";
 import GeoUtils from "./geo/geoUtils";
+import GeoCommons from "./geo/geoCommon";
 
 export {
 	LatLon,
@@ -29,5 +30,6 @@ export {
 	CsvStatics,
 	GeoJSONStatics,
 	UtilsStats,
-	GeoUtils
+	GeoUtils,
+	GeoCommons
 };
