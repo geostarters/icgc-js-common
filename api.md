@@ -2,777 +2,290 @@
 
 ### Table of Contents
 
--   [Geography & Geometry][1]
--   [LatLon][2]
-    -   [Parameters][3]
-    -   [Examples][4]
-    -   [setLatitude][5]
-        -   [Parameters][6]
-    -   [setLongitude][7]
-        -   [Parameters][8]
-    -   [toString][9]
-        -   [Examples][10]
--   [LatLonBounds][11]
-    -   [Parameters][12]
-    -   [Examples][13]
-    -   [setNorthEastCorner][14]
-        -   [Parameters][15]
-    -   [setSouthWestCorner][16]
-        -   [Parameters][17]
-    -   [getCenter][18]
-        -   [Examples][19]
-    -   [getSouthWest][20]
-    -   [getNorthEast][21]
--   [Map][22]
+
+-   [Colorizator][22]
     -   [Parameters][23]
-    -   [create][24]
-    -   [mapCreate][25]
-        -   [Parameters][26]
-    -   [mapHasLoaded][27]
-    -   [remove][28]
-    -   [mapRemove][29]
-    -   [setOptions][30]
-        -   [Parameters][31]
-    -   [setData][32]
-        -   [Parameters][33]
-    -   [addData][34]
-        -   [Parameters][35]
-    -   [addMapData][36]
-        -   [Parameters][37]
-    -   [removeMapData][38]
-    -   [subscribe][39]
-        -   [Parameters][40]
-    -   [addControlMap][41]
-        -   [Parameters][42]
--   [MapboxMap][43]
-    -   [Parameters][44]
-    -   [mapCreate][45]
+    -   [Examples][24]
+    -   [getRandomColorFromArray][25]
+    -   [getRandomColor][26]
+    -   [getColorArrayfromPositionBrewer][27]
+        -   [Parameters][28]
+    -   [getColorsScaleRanges][29]
+        -   [Parameters][30]
+    -   [getHslNiceColor][31]
+        -   [Parameters][32]
+    -   [getColorArrayfromSelectedBrewer][33]
+        -   [Parameters][34]
+    -   [generateHTMLBrewerPalettes][35]
+        -   [Parameters][36]
+    -   [generateHTMLLegendColor][37]
+        -   [Parameters][38]
+-   [ArrayStatics][39]
+    -   [Parameters][40]
+    -   [Examples][41]
+    -   [getUniqueValues][42]
+    -   [getBasicsStats][43]
+        -   [Parameters][44]
+    -   [getStatsFromRangesColorsArray][45]
         -   [Parameters][46]
-    -   [mapRemove][47]
-    -   [addMapData][48]
-        -   [Parameters][49]
-    -   [removeMapData][50]
-    -   [hasSourceName][51]
-        -   [Parameters][52]
-    -   [hasLayerID][53]
-        -   [Parameters][54]
-    -   [getStyle][55]
-    -   [getPaintProperty][56]
-        -   [Parameters][57]
-    -   [setMapBaseLayer][58]
-        -   [Parameters][59]
-    -   [fitBBOX][60]
-        -   [Parameters][61]
-    -   [setFilter][62]
+-   [BridgeStatics][47]
+    -   [Parameters][48]
+    -   [Examples][49]
+-   [BridgeStatics][50]
+    -   [Parameters][51]
+    -   [Examples][52]
+-   [CSVStatics][53]
+    -   [Parameters][54]
+    -   [Examples][55]
+    -   [getUniqueValues][56]
+    -   [getStatsFromRangesColorsCSV][57]
+        -   [Parameters][58]
+    -   [getColumFromCSV][59]
+        -   [Parameters][60]
+-   [geoCommons][61]
+    -   [getRastersSources][62]
         -   [Parameters][63]
-    -   [getFilter][64]
+    -   [getRastersSources][64]
         -   [Parameters][65]
-    -   [setAPIKey][66]
+    -   [simplifyStyle][66]
         -   [Parameters][67]
-    -   [subscribe][68]
+    -   [simplifyStyle][68]
         -   [Parameters][69]
-    -   [queryRenderedFeatures][70]
+    -   [isWithinCat][70]
         -   [Parameters][71]
-    -   [setCursor][72]
+    -   [isWithinCat][72]
         -   [Parameters][73]
--   [Request][74]
-    -   [processResponse][75]
+-   [geoCommons][74]
+    -   [getRastersSources][75]
         -   [Parameters][76]
-    -   [get][77]
+    -   [getRastersSources][77]
         -   [Parameters][78]
-    -   [delete][79]
+    -   [simplifyStyle][79]
         -   [Parameters][80]
-    -   [post][81]
+    -   [simplifyStyle][81]
         -   [Parameters][82]
-    -   [put][83]
+    -   [isWithinCat][83]
         -   [Parameters][84]
--   [removeItem][85]
-    -   [Parameters][86]
--   [applyFunctoDataArray][87]
+    -   [isWithinCat][85]
+        -   [Parameters][86]
+-   [getFirstSymbolLayerId][87]
     -   [Parameters][88]
--   [isEmptyObject][89]
+-   [getFirstSymbolLayerId][89]
     -   [Parameters][90]
--   [debounce][91]
+-   [getFirstSymbolLayerId][91]
     -   [Parameters][92]
--   [debounceImmediate][93]
+-   [getFirstSymbolLayerId][93]
     -   [Parameters][94]
--   [bindAll][95]
-    -   [Parameters][96]
--   [Colorizator][97]
+-   [getEmptyGeoJSON][95]
+-   [getEmptyGeoJSON][96]
+-   [getGeoJSONPoint][97]
     -   [Parameters][98]
-    -   [Examples][99]
-    -   [getRandomColorFromArray][100]
-    -   [getRandomColor][101]
-    -   [getColorArrayfromPositionBrewer][102]
-        -   [Parameters][103]
-    -   [getColorsScaleRanges][104]
-        -   [Parameters][105]
-    -   [getHslNiceColor][106]
-        -   [Parameters][107]
-    -   [getColorArrayfromSelectedBrewer][108]
-        -   [Parameters][109]
-    -   [generateHTMLBrewerPalettes][110]
-        -   [Parameters][111]
-    -   [generateHTMLLegendColor][112]
-        -   [Parameters][113]
--   [ArrayStatics][114]
-    -   [Parameters][115]
-    -   [Examples][116]
-    -   [getUniqueValues][117]
-    -   [getBasicsStats][118]
+-   [getGeoJSONPoint][99]
+    -   [Parameters][100]
+-   [isInsideCat][101]
+    -   [Parameters][102]
+-   [isInsideCat][103]
+    -   [Parameters][104]
+-   [usedSource][105]
+    -   [Parameters][106]
+-   [usedSource][107]
+    -   [Parameters][108]
+-   [GeoJSONStatistics][109]
+    -   [Parameters][110]
+    -   [Examples][111]
+    -   [getUniqueValues][112]
+    -   [getUniqueValues][113]
+    -   [getStatsFromRangesColorsGeoJSON][114]
+        -   [Parameters][115]
+    -   [getStatsFromRangesColorsGeoJSON][116]
+        -   [Parameters][117]
+    -   [getColumnFromGEOJSON][118]
         -   [Parameters][119]
-    -   [getStatsFromRangesColorsArray][120]
+    -   [getColumnFromGEOJSON][120]
         -   [Parameters][121]
--   [BridgeStatics][122]
-    -   [Parameters][123]
-    -   [Examples][124]
--   [CSVStatics][125]
-    -   [Parameters][126]
-    -   [Examples][127]
-    -   [getUniqueValues][128]
-    -   [getStatsFromRangesColorsCSV][129]
-        -   [Parameters][130]
-    -   [getColumFromCSV][131]
+    -   [\_getColumFromGEOJSONFilter][122]
+        -   [Parameters][123]
+    -   [\_getColumFromGEOJSONFilter][124]
+        -   [Parameters][125]
+-   [GeoJSONStatistics][126]
+    -   [Parameters][127]
+    -   [Examples][128]
+    -   [getUniqueValues][129]
+    -   [getUniqueValues][130]
+    -   [getStatsFromRangesColorsGeoJSON][131]
         -   [Parameters][132]
--   [GeoJSONStatistics][133]
-    -   [Parameters][134]
-    -   [Examples][135]
-    -   [getUniqueValues][136]
-    -   [getStatsFromRangesColorsGeoJSON][137]
+    -   [getStatsFromRangesColorsGeoJSON][133]
+        -   [Parameters][134]
+    -   [getColumnFromGEOJSON][135]
+        -   [Parameters][136]
+    -   [getColumnFromGEOJSON][137]
         -   [Parameters][138]
-    -   [getColumnFromGEOJSON][139]
+    -   [\_getColumFromGEOJSONFilter][139]
         -   [Parameters][140]
     -   [\_getColumFromGEOJSONFilter][141]
         -   [Parameters][142]
--   [UtilsStatics][143]
--   [GeoUtils][144]
--   [getFirstSymbolLayerId][145]
-    -   [Parameters][146]
--   [getFirstSymbolLayerId][147]
-    -   [Parameters][148]
--   [getEmptyGeoJSON][149]
--   [getGeoJSONPoint][150]
-    -   [Parameters][151]
--   [getRastersSources][152]
-    -   [Parameters][153]
--   [simplifyStyle][154]
-    -   [Parameters][155]
--   [isWithinCat][156]
-    -   [Parameters][157]
--   [isInsideCat][158]
-    -   [Parameters][159]
--   [usedSource][160]
-    -   [Parameters][161]
+-   [GeoUtils][143]
+-   [Map][144]
+    -   [Parameters][145]
+    -   [create][146]
+    -   [mapCreate][147]
+        -   [Parameters][148]
+    -   [mapHasLoaded][149]
+    -   [remove][150]
+    -   [mapRemove][151]
+    -   [setOptions][152]
+        -   [Parameters][153]
+    -   [setData][154]
+        -   [Parameters][155]
+    -   [addData][156]
+        -   [Parameters][157]
+    -   [addMapData][158]
+        -   [Parameters][159]
+    -   [removeMapData][160]
+    -   [subscribe][161]
+        -   [Parameters][162]
+    -   [addControlMap][163]
+        -   [Parameters][164]
+-   [MapboxMap][165]
+    -   [Parameters][166]
+    -   [mapCreate][167]
+        -   [Parameters][168]
+    -   [mapRemove][169]
+    -   [addMapData][170]
+        -   [Parameters][171]
+    -   [removeMapData][172]
+    -   [hasSourceName][173]
+        -   [Parameters][174]
+    -   [hasLayerID][175]
+        -   [Parameters][176]
+    -   [getStyle][177]
+    -   [getPaintProperty][178]
+        -   [Parameters][179]
+    -   [setMapBaseLayer][180]
+        -   [Parameters][181]
+    -   [fitBBOX][182]
+        -   [Parameters][183]
+    -   [setFilter][184]
+        -   [Parameters][185]
+    -   [getFilter][186]
+        -   [Parameters][187]
+    -   [setAPIKey][188]
+        -   [Parameters][189]
+    -   [subscribe][190]
+        -   [Parameters][191]
+    -   [queryRenderedFeatures][192]
+        -   [Parameters][193]
+    -   [setCursor][194]
+        -   [Parameters][195]
+-   [UtilsStatics][196]
+-   [JsonToMap][197]
+    -   [Parameters][198]
+    -   [Examples][199]
+-   [MapStyle][200]
+    -   [Parameters][201]
+    -   [Examples][202]
+    -   [getGeomTypeFromGeoJSON][203]
+    -   [getFieldNamesColumnFromGEOJSON][204]
+    -   [getImplementedLayerTypes][205]
+    -   [getFilterByDefault][206]
+        -   [Parameters][207]
+        -   [Examples][208]
+    -   [generateGeoStatisticsFromField][209]
+        -   [Parameters][210]
+        -   [Examples][211]
+    -   [createStyleLayer][212]
+        -   [Parameters][213]
+    -   [setStyleFromPreDefinedRamTemperatureHeights][214]
+        -   [Parameters][215]
+    -   [setStyleFromPreDefinedRamTemperatureInterpolateHeights][216]
+        -   [Parameters][217]
+    -   [setStyleTextSizeByFactorSize][218]
+        -   [Parameters][219]
+    -   [setStyleFromPreDefinedRamTemperatureColor][220]
+        -   [Parameters][221]
+    -   [setStylesFromPredefinedScales][222]
+        -   [Parameters][223]
+    -   [setStylesPaintFromRanges][224]
+        -   [Parameters][225]
+        -   [Examples][226]
+    -   [setStylebyFactorHeights][227]
+        -   [Parameters][228]
+        -   [Examples][229]
+    -   [getFieldType][230]
+        -   [Parameters][231]
+        -   [Examples][232]
+    -   [getExtendFromGeoJSON][233]
+    -   [getHaloStyleColors][234]
+    -   [setStylePaintFromUniquesValues][235]
+        -   [Parameters][236]
+        -   [Examples][237]
+-   [Request][238]
+    -   [processResponse][239]
+        -   [Parameters][240]
+    -   [processResponse][241]
+        -   [Parameters][242]
+    -   [get][243]
+        -   [Parameters][244]
+    -   [get][245]
+        -   [Parameters][246]
+    -   [delete][247]
+        -   [Parameters][248]
+    -   [delete][249]
+        -   [Parameters][250]
+    -   [post][251]
+        -   [Parameters][252]
+    -   [post][253]
+        -   [Parameters][254]
+    -   [put][255]
+        -   [Parameters][256]
+    -   [put][257]
+        -   [Parameters][258]
+-   [Request][259]
+    -   [processResponse][260]
+        -   [Parameters][261]
+    -   [processResponse][262]
+        -   [Parameters][263]
+    -   [get][264]
+        -   [Parameters][265]
+    -   [get][266]
+        -   [Parameters][267]
+    -   [delete][268]
+        -   [Parameters][269]
+    -   [delete][270]
+        -   [Parameters][271]
+    -   [post][272]
+        -   [Parameters][273]
+    -   [post][274]
+        -   [Parameters][275]
+    -   [put][276]
+        -   [Parameters][277]
+    -   [put][278]
+        -   [Parameters][279]
+-   [removeItem][280]
+    -   [Parameters][281]
+-   [applyFunctoDataArray][282]
+    -   [Parameters][283]
+-   [isEmptyObject][284]
+    -   [Parameters][285]
+-   [debounce][286]
+    -   [Parameters][287]
+-   [debounceImmediate][288]
+    -   [Parameters][289]
+-   [bindAll][290]
+    -   [Parameters][291]
 
-## Geography & Geometry
 
-`LatLon` and `LatLonBounds` represent points and rectanges in geographic
-coordinates.
-
-
-## LatLon
-
-[src/geo/latlon.js:12-79][162]
-
-A `LatLon` object represents a given latitude and longitude coordinates.
-
-### Parameters
-
--   `lat` **[number][163]** Latitude, measured in degrees.
--   `lon` **[number][163]** Longitude, measured in degrees.
-
-### Examples
-
-```javascript
-var ll = new LatLon(42.10376, 1.84584);
-```
-
-### setLatitude
-
-[src/geo/latlon.js:45-50][164]
-
-Set the latitude
-
-#### Parameters
-
--   `lat` **[number][163]** 
-
-Returns **[LatLon][165]** `this`
-
-### setLongitude
-
-[src/geo/latlon.js:58-63][166]
-
-Set the longitude
-
-#### Parameters
-
--   `lon` **[number][163]** 
-
-Returns **[LatLon][165]** `this`
-
-### toString
-
-[src/geo/latlon.js:73-77][167]
-
-Returns the LatLon object as a string.
-
-#### Examples
-
-```javascript
-var ll = new LatLon(42.10376, 1.84584);
-ll.toString(); //"LatLon(42.10376, 1.84584)"
-```
-
-Returns **[string][168]** The coordinates as a string in the format `'LatLon(lat, lng)'`.
-
-## LatLonBounds
-
-[src/geo/latlonBounds.js:17-88][169]
-
-A `LatLonBounds` represents a geographical bounding box,
-defined by its SW and NE points in latitude and longitude.
-
-### Parameters
-
--   `sw` **[LatLon][165]** The SW corner of the bounding box.
--   `ne` **[LatLon][165]** The NE corner of the bounding box.
-
-### Examples
-
-```javascript
-var sw = new LatLon(40.513799, 0.159352);
-var ne = new LatLon(42.90816, 3.317178);
-var llb = new LatLonBounds(sw, ne);
-```
-
-### setNorthEastCorner
-
-[src/geo/latlonBounds.js:32-37][170]
-
-Set the northeast corner of the bounding box
-
-#### Parameters
-
--   `ne` **[LatLon][165]** 
-
-Returns **[LatLonBounds][171]** `this`
-
-### setSouthWestCorner
-
-[src/geo/latlonBounds.js:45-50][172]
-
-Set the southwest corner of the bounding box
-
-#### Parameters
-
--   `sw` **[LatLon][165]** 
-
-Returns **[LatLonBounds][171]** `this`
-
-### getCenter
-
-[src/geo/latlonBounds.js:60-64][173]
-
-Returns the center of the bounding box defined by these bounds
-
-#### Examples
-
-```javascript
-var llb = new LatLonBounds([-73.9876, 40.7661], [-73.9397, 40.8002]);
-llb.getCenter(); //LatLon {lat: 40.78315, lon: -73.96365 }
-```
-
-Returns **[LatLon][165]** The bounding box's center.
-
-### getSouthWest
-
-[src/geo/latlonBounds.js:71-75][174]
-
-Returns the southwest corner
-
-Returns **[LatLon][165]** The southwest corner of the bounding box.
-
-### getNorthEast
-
-[src/geo/latlonBounds.js:82-86][175]
-
-Returns the northeast corner
-
-Returns **[LatLon][165]** The northeast corner of the bounding box.
-
-## Map
-
-[src/geo/map.js:10-231][176]
-
-Map using the mapbox backend
-
-### Parameters
-
--   `options` **MapOptions** 
--   `apiKey` **[string][168]** The api key used by the map
--   `containerId` **[string][168]** The container id where the map will be drawn
--   `styleId` **[string][168]** The style id that will be used to draw the map
-
-### create
-
-[src/geo/map.js:25-41][177]
-
-Creates the map
-
-Returns **[Promise][178]&lt;void>** A Promise when the map has been loaded
-
-### mapCreate
-
-[src/geo/map.js:50-54][179]
-
-Creates the map object. Implementation specific
-
-#### Parameters
-
--   `resolve` **[function][180]** The function to call when the map creation succeeds
--   `reject` **[function][180]** The function to call when the map creation fails
-
-### mapHasLoaded
-
-[src/geo/map.js:61-65][181]
-
-Function called when the map has finished loading. Subclasses must call it before
-setting any data
-
-### remove
-
-[src/geo/map.js:70-78][182]
-
-Removes the map from the element
-
-### mapRemove
-
-[src/geo/map.js:83-87][183]
-
-Removes the map object. Implementation specific
-
-### setOptions
-
-[src/geo/map.js:94-98][184]
-
-Sets the map options
-
-#### Parameters
-
--   `options` **MapOptions** 
-
-### setData
-
-[src/geo/map.js:105-118][185]
-
-Sets the data to draw
-
-#### Parameters
-
--   `data` **MapData** 
-
-### addData
-
-[src/geo/map.js:125-137][186]
-
-Adds data to draw to the existing data
-
-#### Parameters
-
--   `data` **MapData** 
-
-### addMapData
-
-[src/geo/map.js:145-149][187]
-
-Adds data to draw to the existing data. Implementation specific
-
-#### Parameters
-
--   `data` **MapData** 
-
-### removeMapData
-
-[src/geo/map.js:155-159][188]
-
-Removes all the data from the map. Implementation specific
-
-### subscribe
-
-[src/geo/map.js:169-173][189]
-
-Subscribe to a map event that happens on a layer
-
-#### Parameters
-
--   `eventName` **[string][168]** The event name
--   `layerName` **[string][168]** The layer name
--   `callback` **[Function][180]** The callback to run when the event arrives
-
-### addControlMap
-
-[src/geo/map.js:184-188][190]
-
-AddControl to map map
-
-#### Parameters
-
--   `controlName` **[string][168]** The event name
--   `controlOptions` **[object][191]** The layer name
-
-## MapboxMap
-
-[src/geo/mapboxMap.js:13-433][192]
-
-**Extends Map**
-
-Map using the mapbox backend
-
-### Parameters
-
--   `mapboxObject` **[Object][191]** 
--   `apiKey` **[string][168]** The api key used by the map
--   `options` **MapOptions?** 
--   `containerId` **[string][168]** The container id where the map will be drawn
--   `styleId` **[string][168]** The style id that will be used to draw the map
-
-### mapCreate
-
-[src/geo/mapboxMap.js:41-53][193]
-
--   **See: Map::create
-    **
-
-Creates the map. Do not call directly
-
-#### Parameters
-
--   `resolve` **[function][180]** The function to call when the map creation succeeds
--   `reject` **[function][180]** The function to call when the map creation fails
-
-### mapRemove
-
-[src/geo/mapboxMap.js:60-64][194]
-
--   **See: Map::remove
-    **
-
-Removes the map from the element. Do not call directly
-
-### addMapData
-
-[src/geo/mapboxMap.js:73-103][195]
-
--   **See: Map::addData
-    **
-
-Adds data to draw to the map. Do not call directly
-
-#### Parameters
-
--   `data` **MapData** 
-
-### removeMapData
-
-[src/geo/mapboxMap.js:109-119][196]
-
-Removes all the data (sources and layers) from the map. Implementation specific
-
-### hasSourceName
-
-[src/geo/mapboxMap.js:126-130][197]
-
-Checks if the sourceName exists in the map
-
-#### Parameters
-
--   `sourceName`  
-
-### hasLayerID
-
-[src/geo/mapboxMap.js:136-140][198]
-
-Checks if the layerID exists in the map
-
-#### Parameters
-
--   `layerID`  
-
-### getStyle
-
-[src/geo/mapboxMap.js:149-153][199]
-
--   **See: Map::getStyle
-    **
-
-Return the style map.
-
-### getPaintProperty
-
-[src/geo/mapboxMap.js:164-170][200]
-
--   **See: Map::getPaintProperty
-    **
-
-Return mapStyle.
-
-#### Parameters
-
--   `layerid` **layerid** 
--   `property` **property** 
-
-### setMapBaseLayer
-
-[src/geo/mapboxMap.js:178-198][201]
-
--   **See: Map::setMapBaseLayer
-    **
-
-Sets the data to draw. Do not call directly
-
-#### Parameters
-
--   `baseLayerURL` **[string][168]** 
--   `url` **baseLayr** 
-
-### fitBBOX
-
-[src/geo/mapboxMap.js:205-211][202]
-
-Fit a map to a bounding box
-
-#### Parameters
-
--   `bbox`  
--   `pitch`   (optional, default `0`)
--   `Array` **bbox** "bbox":"1.079053,41.290767,1.104497,41.308387"
-
-### setFilter
-
-[src/geo/mapboxMap.js:338-342][203]
-
-SetFilters
-
-#### Parameters
-
--   `layer`  
--   `filter`  
-
-### getFilter
-
-[src/geo/mapboxMap.js:350-354][204]
-
-return filter getFilter
-
-#### Parameters
-
--   `layer`  
-
-### setAPIKey
-
-[src/geo/mapboxMap.js:376-380][205]
-
-Sets the API key used by the map
-
-#### Parameters
-
--   `apiKey` **[string][168]** 
-
-### subscribe
-
-[src/geo/mapboxMap.js:389-401][206]
-
-Subscribe to a map event that happens on a layer
-
-#### Parameters
-
--   `eventName` **[string][168]** The event name
--   `layerName` **[string][168]** The layer name
--   `callback` **[Function][180]** The callback to run when the event arrives
-
-### queryRenderedFeatures
-
-[src/geo/mapboxMap.js:416-420][207]
-
-Queries the rendered features in a point or a bbox
-
-#### Parameters
-
--   `place` **(PointLike | [Array][208]&lt;PointLike>)?** 
--   `layer` **[string][168]** 
-
-### setCursor
-
-[src/geo/mapboxMap.js:427-431][209]
-
-Changes the cursor type
-
-#### Parameters
-
--   `name` **[string][168]** 
-
-## Request
-
-[src/request.js:8-117][210]
-
-Request functions
-
-### processResponse
-
-[src/request.js:16-37][211]
-
-Processes a request response checking if the results are ok
-and resolves or rejects accordingly
-
-#### Parameters
-
--   `response` **[Object][191]** 
--   `resolve` **[Function][180]** 
--   `reject` **[Function][180]** 
-
-### get
-
-[src/request.js:50-60][212]
-
-Does a get request
-
-#### Parameters
-
--   `url` **[string][168]** The URL where the get request should be made including protocol
-
-Returns **[Promise][178]&lt;[Object][191]>** 
-
-### delete
-
-[src/request.js:68-78][213]
-
-Does a get request
-
-#### Parameters
-
--   `url` **[string][168]** The URL where the get request should be made
-
-Returns **[Promise][178]&lt;[Object][191]>** 
-
-### post
-
-[src/request.js:87-97][214]
-
-Does a post request
-
-#### Parameters
-
--   `url` **[string][168]** The URL where the post should be made
--   `data` **any** The data to send in the post request
-
-Returns **[Promise][178]&lt;[Object][191]>** 
-
-### put
-
-[src/request.js:105-115][215]
-
-Does a post request
-
-#### Parameters
-
--   `url` **[string][168]** The URL where the post should be made
--   `data` **any** The data to send in the post request
-
-Returns **[Promise][178]&lt;[Object][191]>** 
-
-## removeItem
-
-[src/utils.js:13-19][216]
-
-Remove the item at the specified position
-
-### Parameters
-
--   `items` **[array][208]** array.
--   `position` **[number][163]** position of the element to remove, starting from 1.
-
-Returns **[array][208]** return a new array, without modifying the original
-
-## applyFunctoDataArray
-
-[src/utils.js:28-38][217]
-
-Apply a function to each item of the array
-
-### Parameters
-
--   `arr` **[array][208]** array.
--   `fn` **[function][180]** function to apply to each item of the array
-
-## isEmptyObject
-
-[src/utils.js:83-96][218]
-
-Check if an object is empty
-
-### Parameters
-
--   `obj` **[Object][191]** 
-
-Returns **[boolean][219]** true in case the object is empty, false otherwise
-
-## debounce
-
-[src/utils.js:105-119][220]
-
-Debounce function for more efficient event handling
-
-### Parameters
-
--   `fn` **[function][180]** 
--   `delay` **[number][163]** number of milisiconds of delay
-
-Returns **[function][180]** debounce function
-
-## debounceImmediate
-
-[src/utils.js:129-176][221]
-
-Debounce function for more efficient event handling
-
-### Parameters
-
--   `func`  
--   `wait`  
--   `immediate` **[boolean][219]** executes de function fn immediatly or not
--   `fn` **[function][180]** 
--   `delay` **[number][163]** number of milisiconds of delay
-
-Returns **[function][180]** debounce function
-
-## bindAll
-
-[src/utils.js:188-201][222]
-
-Given an array of member function names as strings, replace all of them
-with bound versions that will always refer to `context` as `this`. This
-is useful for classes where otherwise event bindings would reassign
-`this` to the evented object or some other value: this lets you ensure
-the `this` value always.
-
-### Parameters
-
--   `fns` **[Array][208]&lt;[string][168]>** list of member function names
--   `context` **[Object][191]** the context value
-
-Returns **void** 
 
 ## Colorizator
 
-[src/color/colorizator.js:16-349][223]
+[src/color/colorizator.js:16-349][306]
 
 A `Colorizator` object represents a given latitude and longitude coordinates.
 
 ### Parameters
 
--   `lat` **[number][163]** Latitude, measured in degrees.
--   `lon` **[number][163]** Longitude, measured in degrees.
+-   `lat` **[number][293]** Latitude, measured in degrees.
+-   `lon` **[number][293]** Longitude, measured in degrees.
 
 ### Examples
 
@@ -782,15 +295,15 @@ const color = new Colorizator();
 
 ### getRandomColorFromArray
 
-[src/color/colorizator.js:36-50][224]
+[src/color/colorizator.js:36-50][307]
 
 Get Random color from Array
 
-Returns **[string][168]** `this`
+Returns **[string][298]** `this`
 
 ### getRandomColor
 
-[src/color/colorizator.js:58-71][225]
+[src/color/colorizator.js:58-71][308]
 
 Get Random color hex
 
@@ -798,96 +311,96 @@ Returns **color** `this`
 
 ### getColorArrayfromPositionBrewer
 
-[src/color/colorizator.js:120-125][226]
+[src/color/colorizator.js:120-125][309]
 
 Get Chormaarray color from brewer palette
 
 #### Parameters
 
--   `numRangs` **[number][163]** 
--   `brewerPosition` **[number][163]** 
--   `brewerName` **[string][168]** 
+-   `numRangs` **[number][293]** 
+-   `brewerPosition` **[number][293]** 
+-   `brewerName` **[string][298]** 
 
 Returns **color** `this`
 
 ### getColorsScaleRanges
 
-[src/color/colorizator.js:135-147][227]
+[src/color/colorizator.js:135-147][310]
 
 Get Chormaarray form two colors
 
 #### Parameters
 
--   `numRangs` **[number][163]** 
--   `colorInit` **[string][168]** 
--   `colorEnd` **[string][168]** 
--   `brewerName` **[string][168]** 
+-   `numRangs` **[number][293]** 
+-   `colorInit` **[string][298]** 
+-   `colorEnd` **[string][298]** 
+-   `brewerName` **[string][298]** 
 
 Returns **color** `this`
 
 ### getHslNiceColor
 
-[src/color/colorizator.js:155-161][228]
+[src/color/colorizator.js:155-161][311]
 
 Gets de HSL contrast color from a given color
 
 #### Parameters
 
--   `hex` **[string][168]** 
+-   `hex` **[string][298]** 
 
-Returns **[string][168]** `this`
+Returns **[string][298]** `this`
 
 ### getColorArrayfromSelectedBrewer
 
-[src/color/colorizator.js:210-215][229]
+[src/color/colorizator.js:210-215][312]
 
 Get Chormaarray color from brewer palette
 
 #### Parameters
 
--   `numRangs` **[number][163]** 
--   `brewerName` **[string][168]** 
+-   `numRangs` **[number][293]** 
+-   `brewerName` **[string][298]** 
 
 Returns **color** `this`
 
 ### generateHTMLBrewerPalettes
 
-[src/color/colorizator.js:232-270][230]
+[src/color/colorizator.js:232-270][313]
 
 Get HTML palete color
 
 #### Parameters
 
--   `numberPalettes` **[number][163]** //number  of palletes max this.maxBrewerPalettes
--   `numRangs` **[number][163]** //number of colors for each palette max this.maxBrewerPalettes
+-   `numberPalettes` **[number][293]** //number  of palletes max this.maxBrewerPalettes
+-   `numRangs` **[number][293]** //number of colors for each palette max this.maxBrewerPalettes
 
 Returns **color** `this`
 
 ### generateHTMLLegendColor
 
-[src/color/colorizator.js:282-347][231]
+[src/color/colorizator.js:282-347][314]
 
 Generate HTML legend palete color
 
 #### Parameters
 
--   `legendColors` **[array][208]** 
--   `legendRanges` **[array][208]** 
--   `textTitol` **[string][168]** 
--   `classCSS` **[string][168]** 
--   `numRang` **[string][168]** 8
+-   `legendColors` **[array][315]** 
+-   `legendRanges` **[array][315]** 
+-   `textTitol` **[string][298]** 
+-   `classCSS` **[string][298]** 
+-   `numRang` **[string][298]** 8
 
 Returns **color** `this`
 
 ## ArrayStatics
 
-[src/geo/arrayStatics.js:16-102][232]
+[src/geo/arrayStatics.js:16-102][316]
 
 Generate basic statistics from Array.
 
 ### Parameters
 
--   `arrayColumn` **[Array][208]** 
+-   `arrayColumn` **[Array][315]** 
 
 ### Examples
 
@@ -899,48 +412,66 @@ const ArrayStatics = new ArrayStatics(arrayColumn);
 
 ### getUniqueValues
 
-[src/geo/arrayStatics.js:45-49][233]
+[src/geo/arrayStatics.js:45-49][317]
 
 Returns Array Unique Values
 
-Returns **[array][208]** 
+Returns **[array][315]** 
 
 ### getBasicsStats
 
-[src/geo/arrayStatics.js:59-68][234]
+[src/geo/arrayStatics.js:59-68][318]
 
 Returns basics stats
 
 #### Parameters
 
--   `decimals` **[number][163]** 
+-   `decimals` **[number][293]** 
 
-Returns **[object][191]** 
+Returns **[object][319]** 
 
 ### getStatsFromRangesColorsArray
 
-[src/geo/arrayStatics.js:79-99][235]
+[src/geo/arrayStatics.js:79-99][320]
 
 Returns stats form RangeNum and colors Array
 
 #### Parameters
 
--   `numRanges` **[number][163]** : 5
--   `arrayColors` **[Array][208]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
+-   `numRanges` **[number][293]** : 5
+-   `arrayColors` **[Array][315]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
 
-Returns **[object][191]** 
+Returns **[object][319]** 
 
 ## BridgeStatics
 
-[src/geo/bridgeStatics.js:12-122][236]
+[src/geo/bridgeStatics.js:12-122][321]
 
 A `BridgeStatics` object represents a given latitude and longitude coordinates.
 
 ### Parameters
 
--   `arrayColumn` **[Array][208]&lt;[number][163]>** 
--   `lat` **[number][163]** Latitude, measured in degrees.
--   `lon` **[number][163]** Longitude, measured in degrees.
+-   `arrayColumn` **[Array][315]&lt;[number][293]>** 
+-   `lat` **[number][293]** Latitude, measured in degrees.
+-   `lon` **[number][293]** Longitude, measured in degrees.
+
+### Examples
+
+```javascript
+var ll = new BridgeStatics(42.10376, 1.84584);
+```
+
+## BridgeStatics
+
+[src/geo/BridgeStatics.js:12-122][322]
+
+A `BridgeStatics` object represents a given latitude and longitude coordinates.
+
+### Parameters
+
+-   `arrayColumn` **[Array][315]&lt;[number][293]>** 
+-   `lat` **[number][293]** Latitude, measured in degrees.
+-   `lon` **[number][293]** Longitude, measured in degrees.
 
 ### Examples
 
@@ -950,14 +481,14 @@ var ll = new BridgeStatics(42.10376, 1.84584);
 
 ## CSVStatics
 
-[src/geo/csvStatics.js:21-137][237]
+[src/geo/csvStatics.js:21-137][323]
 
 Generate basic statistics from CSV array.
 
 ### Parameters
 
--   `arrayCSV` **[Array][208]&lt;[number][163]>** 
--   `numCSVColumn` **[number][163]** 
+-   `arrayCSV` **[Array][315]&lt;[number][293]>** 
+-   `numCSVColumn` **[number][293]** 
 -   `null/null/position` **numCSVColumn** field array CSV
 
 ### Examples
@@ -975,50 +506,352 @@ const csvStatics = new CSVStatics(arrayCSV, numCSVColumn);
 
 ### getUniqueValues
 
-[src/geo/csvStatics.js:52-56][238]
+[src/geo/csvStatics.js:52-56][324]
 
 Returns Array Unique Values
 
-Returns **[array][208]** 
+Returns **[array][315]** 
 
 ### getStatsFromRangesColorsCSV
 
-[src/geo/csvStatics.js:66-84][239]
+[src/geo/csvStatics.js:66-84][325]
 
 Returns stats form RangeNum and colors Array
 
 #### Parameters
 
--   `numRanges` **[number][163]** : 5
--   `arrayColors` **[Array][208]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
+-   `numRanges` **[number][293]** : 5
+-   `arrayColors` **[Array][315]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
 
-Returns **[object][191]** 
+Returns **[object][319]** 
 
 ### getColumFromCSV
 
-[src/geo/csvStatics.js:95-134][240]
+[src/geo/csvStatics.js:95-134][326]
 
 Returns array from csv properties field
 Used in the constructor
 
 #### Parameters
 
--   `numColum` **[string][168]** 
--   `dataCSV` **[array][208]** 
--   `forceToNumber` **[boolean][219]**  (optional, default `false`)
+-   `numColum` **[string][298]** 
+-   `dataCSV` **[array][315]** 
+-   `forceToNumber` **[boolean][327]**  (optional, default `false`)
 
-Returns **[array][208]** `this`
+Returns **[array][315]** `this`
+
+## geoCommons
+
+[src/geo/geoCommons.js:10-491][328]
+
+Classe geoCommons
+
+### getRastersSources
+
+[src/geo/geoCommons.js:66-75][329]
+
+GetRastersSources from Mapbox Style.
+
+#### Parameters
+
+-   `sources` **[object][319]** Input sources object map.getSources().
+-   `rasterSources` **[object][319]** Output raster sources.
+
+Returns **[object][319]** rasterSources
+
+### getRastersSources
+
+[src/geo/GeoCommons.js:66-75][330]
+
+GetRastersSources from Mapbox Style.
+
+#### Parameters
+
+-   `sources` **[object][319]** Input sources object map.getSources().
+-   `rasterSources` **[object][319]** Output raster sources.
+
+Returns **[object][319]** rasterSources
+
+### simplifyStyle
+
+[src/geo/geoCommons.js:83-155][331]
+
+Simplify from Mapbox Style.
+
+#### Parameters
+
+-   `currentStyle` **[object][319]** Input styke object map.getStyle().
+-   `esriFy` **[boolean][327]** Optimize for Esri Styles.
+-   `nonAddVisibilityNone` **[boolean][327]**  add or  no Layers visibility:none
+
+Returns **[object][319]** Mapbox Style
+
+### simplifyStyle
+
+[src/geo/GeoCommons.js:83-155][332]
+
+Simplify from Mapbox Style.
+
+#### Parameters
+
+-   `currentStyle` **[object][319]** Input styke object map.getStyle().
+-   `esriFy` **[boolean][327]** Optimize for Esri Styles.
+-   `nonAddVisibilityNone` **[boolean][327]**  add or  no Layers visibility:none
+
+Returns **[object][319]** Mapbox Style
+
+### isWithinCat
+
+[src/geo/geoCommons.js:226-488][333]
+
+isWithinCat check if a bbox is within Catalonia.
+
+#### Parameters
+
+-   `bbox` **[array][315]** Input map.getBounds().toArray() or [1.4622,41.7139 ,1.8117 ,42.0330].
+
+Returns **[boolean][327]** 
+
+### isWithinCat
+
+[src/geo/GeoCommons.js:226-488][334]
+
+isWithinCat check if a bbox is within Catalonia.
+
+#### Parameters
+
+-   `bbox` **[array][315]** Input map.getBounds().toArray() or [1.4622,41.7139 ,1.8117 ,42.0330].
+
+Returns **[boolean][327]** 
+
+## geoCommons
+
+[src/geo/GeoCommons.js:10-491][335]
+
+Classe geoCommons
+
+### getRastersSources
+
+[src/geo/geoCommons.js:66-75][329]
+
+GetRastersSources from Mapbox Style.
+
+#### Parameters
+
+-   `sources` **[object][319]** Input sources object map.getSources().
+-   `rasterSources` **[object][319]** Output raster sources.
+
+Returns **[object][319]** rasterSources
+
+### getRastersSources
+
+[src/geo/GeoCommons.js:66-75][330]
+
+GetRastersSources from Mapbox Style.
+
+#### Parameters
+
+-   `sources` **[object][319]** Input sources object map.getSources().
+-   `rasterSources` **[object][319]** Output raster sources.
+
+Returns **[object][319]** rasterSources
+
+### simplifyStyle
+
+[src/geo/geoCommons.js:83-155][331]
+
+Simplify from Mapbox Style.
+
+#### Parameters
+
+-   `currentStyle` **[object][319]** Input styke object map.getStyle().
+-   `esriFy` **[boolean][327]** Optimize for Esri Styles.
+-   `nonAddVisibilityNone` **[boolean][327]**  add or  no Layers visibility:none
+
+Returns **[object][319]** Mapbox Style
+
+### simplifyStyle
+
+[src/geo/GeoCommons.js:83-155][332]
+
+Simplify from Mapbox Style.
+
+#### Parameters
+
+-   `currentStyle` **[object][319]** Input styke object map.getStyle().
+-   `esriFy` **[boolean][327]** Optimize for Esri Styles.
+-   `nonAddVisibilityNone` **[boolean][327]**  add or  no Layers visibility:none
+
+Returns **[object][319]** Mapbox Style
+
+### isWithinCat
+
+[src/geo/geoCommons.js:226-488][333]
+
+isWithinCat check if a bbox is within Catalonia.
+
+#### Parameters
+
+-   `bbox` **[array][315]** Input map.getBounds().toArray() or [1.4622,41.7139 ,1.8117 ,42.0330].
+
+Returns **[boolean][327]** 
+
+### isWithinCat
+
+[src/geo/GeoCommons.js:226-488][334]
+
+isWithinCat check if a bbox is within Catalonia.
+
+#### Parameters
+
+-   `bbox` **[array][315]** Input map.getBounds().toArray() or [1.4622,41.7139 ,1.8117 ,42.0330].
+
+Returns **[boolean][327]** 
+
+## getFirstSymbolLayerId
+
+[src/geo/geoCommons.js:18-27][336]
+
+getFirstSymbolLayerId form MapboxStyle.
+
+### Parameters
+
+-   `layers` **[object][319]** Input style object map.getLayers().
+
+Returns **[object][319]** layer.
+
+## getFirstSymbolLayerId
+
+[src/geo/geoCommons.js:204-219][337]
+
+removeAccents form MapboxStyle.
+
+### Parameters
+
+-   `string` **[string][298]** I.
+
+Returns **[string][298]** string.
+
+## getFirstSymbolLayerId
+
+[src/geo/GeoCommons.js:18-27][338]
+
+getFirstSymbolLayerId form MapboxStyle.
+
+### Parameters
+
+-   `layers` **[object][319]** Input style object map.getLayers().
+
+Returns **[object][319]** layer.
+
+## getFirstSymbolLayerId
+
+[src/geo/GeoCommons.js:204-219][339]
+
+removeAccents form MapboxStyle.
+
+### Parameters
+
+-   `string` **[string][298]** I.
+
+Returns **[string][298]** string.
+
+## getEmptyGeoJSON
+
+[src/geo/geoCommons.js:33-38][340]
+
+Returns **[object][319]** geojson.
+
+## getEmptyGeoJSON
+
+[src/geo/GeoCommons.js:33-38][341]
+
+Returns **[object][319]** geojson.
+
+## getGeoJSONPoint
+
+[src/geo/geoCommons.js:45-57][342]
+
+### Parameters
+
+-   `lng` **float** Longitude.
+-   `lat` **float** Latitude.
+
+Returns **[object][319]** point geojson.
+
+## getGeoJSONPoint
+
+[src/geo/GeoCommons.js:45-57][343]
+
+### Parameters
+
+-   `lng` **float** Longitude.
+-   `lat` **float** Latitude.
+
+Returns **[object][319]** point geojson.
+
+## isInsideCat
+
+[src/geo/geoCommons.js:164-176][344]
+
+X,Y coordinates inside Catalonia BBOX.
+
+### Parameters
+
+-   `x` **float** Longitude.
+-   `y` **float** Latitude.
+
+Returns **[boolean][327]** 
+
+## isInsideCat
+
+[src/geo/GeoCommons.js:164-176][345]
+
+X,Y coordinates inside Catalonia BBOX.
+
+### Parameters
+
+-   `x` **float** Longitude.
+-   `y` **float** Latitude.
+
+Returns **[boolean][327]** 
+
+## usedSource
+
+[src/geo/geoCommons.js:184-195][346]
+
+Check is a Source is Used.
+
+### Parameters
+
+-   `source` **[object][319]** Input style object map.getSources().
+-   `layersArray` **[object][319]** Input stlke object map.getLayers().
+
+Returns **[boolean][327]** 
+
+## usedSource
+
+[src/geo/GeoCommons.js:184-195][347]
+
+Check is a Source is Used.
+
+### Parameters
+
+-   `source` **[object][319]** Input style object map.getSources().
+-   `layersArray` **[object][319]** Input stlke object map.getLayers().
+
+Returns **[boolean][327]** 
 
 ## GeoJSONStatistics
 
-[src/geo/geoJSONStatics.js:16-175][241]
+[src/geo/geoJSONStatics.js:16-175][348]
 
 Return basic stats from a GeoJson data a title field from geojson properties.
 
 ### Parameters
 
--   `geoJSON` **[object][191]** 
--   `keyField` **[string][168]** 
+-   `geoJSON` **[object][319]** 
+-   `keyField` **[string][298]** 
 -   `null` **geoJSON** {geoJSON:geoJSON, filedName: keyField, arrayColumn: arrayColumn}
 
 ### Examples
@@ -1031,176 +864,1184 @@ const geoSattics= new GeoJSONStatics(geoJSON, keyField)
 
 ### getUniqueValues
 
-[src/geo/geoJSONStatics.js:49-54][242]
+[src/geo/geoJSONStatics.js:49-54][349]
 
 Returns Array Unique Values
 
-Returns **[array][208]** 
+Returns **[array][315]** 
+
+### getUniqueValues
+
+[src/geo/GeoJSONStatics.js:49-54][350]
+
+Returns Array Unique Values
+
+Returns **[array][315]** 
 
 ### getStatsFromRangesColorsGeoJSON
 
-[src/geo/geoJSONStatics.js:65-84][243]
+[src/geo/geoJSONStatics.js:65-84][351]
 
 Returns stats form RangeNum and colors Array
 
 #### Parameters
 
--   `numRanges` **[number][163]** : 5
--   `arrayColors` **[Array][208]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
+-   `numRanges` **[number][293]** : 5
+-   `arrayColors` **[Array][315]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
 
-Returns **[object][191]** 
+Returns **[object][319]** 
+
+### getStatsFromRangesColorsGeoJSON
+
+[src/geo/GeoJSONStatics.js:65-84][352]
+
+Returns stats form RangeNum and colors Array
+
+#### Parameters
+
+-   `numRanges` **[number][293]** : 5
+-   `arrayColors` **[Array][315]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
+
+Returns **[object][319]** 
 
 ### getColumnFromGEOJSON
 
-[src/geo/geoJSONStatics.js:95-141][244]
+[src/geo/geoJSONStatics.js:95-141][353]
 
 Returns array from geojson properties field
 Used in the constructor
 
 #### Parameters
 
--   `keyField` **[string][168]** 
--   `GeoJSON` **[object][191]** 
--   `forceNumber` **[boolean][219]**  (optional, default `false`)
--   `keyFiled` **[string][168]** 
--   `geojson` **[object][191]** 
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `forceNumber` **[boolean][327]**  (optional, default `false`)
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
 
-Returns **[array][208]** `this`
+Returns **[array][315]** `this`
+
+### getColumnFromGEOJSON
+
+[src/geo/GeoJSONStatics.js:95-141][354]
+
+Returns array from geojson properties field
+Used in the constructor
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `forceNumber` **[boolean][327]**  (optional, default `false`)
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
+
+Returns **[array][315]** `this`
 
 ### \_getColumFromGEOJSONFilter
 
-[src/geo/geoJSONStatics.js:154-173][245]
+[src/geo/geoJSONStatics.js:154-173][355]
 
 Returns array from geojson properties field, filtered by a value
 
 #### Parameters
 
--   `keyField` **[string][168]** 
--   `GeoJSON` **[object][191]** 
--   `keyFilter` **[string][168]** //Filter field
--   `valueFilter` **[string][168]** 
--   `keyFiled` **[string][168]** 
--   `geojson` **[object][191]** 
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `keyFilter` **[string][298]** //Filter field
+-   `valueFilter` **[string][298]** 
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
 
-Returns **[array][208]** `this`
+Returns **[array][315]** `this`
 
-## UtilsStatics
+### \_getColumFromGEOJSONFilter
 
-[src/geo/utilsStatics.js:6-90][246]
+[src/geo/GeoJSONStatics.js:154-173][356]
 
-Classe d'utils dades estadístiques
+Returns array from geojson properties field, filtered by a value
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `keyFilter` **[string][298]** //Filter field
+-   `valueFilter` **[string][298]** 
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
+
+Returns **[array][315]** `this`
+
+## GeoJSONStatistics
+
+[src/geo/GeoJSONStatics.js:16-175][357]
+
+Return basic stats from a GeoJson data a title field from geojson properties.
+
+### Parameters
+
+-   `geoJSON` **[object][319]** 
+-   `keyField` **[string][298]** 
+-   `null` **geoJSON** {geoJSON:geoJSON, filedName: keyField, arrayColumn: arrayColumn}
+
+### Examples
+
+```javascript
+const keyField = "temp";
+const geoJSON = {"type": "FeatureCollection", "features": [{ "type": "Feature", "properties": {"temp": 2 }, "geometry": {"type": "Point", "coordinates": [2.33184814453125, 41.76926321969369] }}, { "type": "Feature", "properties": {"temp": 2 }, "geometry": {"type": "Point", "coordinates": [2.2686767578125, 41.78014491449217] }}, { "type": "Feature", "properties": {"temp": 5 }, "geometry": {"type": "Point", "coordinates": [2.2703933715820312, 41.725717979972345] }}, { "type": "Feature", "properties": {"temp": "" }, "geometry": {"type": "Point", "coordinates": [2.346096038818359, 41.74698199279457] }}, { "type": "Feature", "properties": {"temp": 1 }, "geometry": {"type": "Point", "coordinates": [2.137527465820312, 41.929868314485795] }}, { "type": "Feature", "properties": {"temp": 8 }, "geometry": {"type": "Point", "coordinates": [2.006378173828125, 41.707266387090684] }}] };
+const geoSattics= new GeoJSONStatics(geoJSON, keyField)
+```
+
+### getUniqueValues
+
+[src/geo/geoJSONStatics.js:49-54][349]
+
+Returns Array Unique Values
+
+Returns **[array][315]** 
+
+### getUniqueValues
+
+[src/geo/GeoJSONStatics.js:49-54][350]
+
+Returns Array Unique Values
+
+Returns **[array][315]** 
+
+### getStatsFromRangesColorsGeoJSON
+
+[src/geo/geoJSONStatics.js:65-84][351]
+
+Returns stats form RangeNum and colors Array
+
+#### Parameters
+
+-   `numRanges` **[number][293]** : 5
+-   `arrayColors` **[Array][315]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
+
+Returns **[object][319]** 
+
+### getStatsFromRangesColorsGeoJSON
+
+[src/geo/GeoJSONStatics.js:65-84][352]
+
+Returns stats form RangeNum and colors Array
+
+#### Parameters
+
+-   `numRanges` **[number][293]** : 5
+-   `arrayColors` **[Array][315]** : ["#ffddcc", "#ccddee", "#ffff00", "#ccddee", "#ffff00"]
+
+Returns **[object][319]** 
+
+### getColumnFromGEOJSON
+
+[src/geo/geoJSONStatics.js:95-141][353]
+
+Returns array from geojson properties field
+Used in the constructor
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `forceNumber` **[boolean][327]**  (optional, default `false`)
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
+
+Returns **[array][315]** `this`
+
+### getColumnFromGEOJSON
+
+[src/geo/GeoJSONStatics.js:95-141][354]
+
+Returns array from geojson properties field
+Used in the constructor
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `forceNumber` **[boolean][327]**  (optional, default `false`)
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
+
+Returns **[array][315]** `this`
+
+### \_getColumFromGEOJSONFilter
+
+[src/geo/geoJSONStatics.js:154-173][355]
+
+Returns array from geojson properties field, filtered by a value
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `keyFilter` **[string][298]** //Filter field
+-   `valueFilter` **[string][298]** 
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
+
+Returns **[array][315]** `this`
+
+### \_getColumFromGEOJSONFilter
+
+[src/geo/GeoJSONStatics.js:154-173][356]
+
+Returns array from geojson properties field, filtered by a value
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `GeoJSON` **[object][319]** 
+-   `keyFilter` **[string][298]** //Filter field
+-   `valueFilter` **[string][298]** 
+-   `keyFiled` **[string][298]** 
+-   `geojson` **[object][319]** 
+
+Returns **[array][315]** `this`
 
 ## GeoUtils
 
-[src/geo/geoUtils.js:8-73][247]
+[src/geo/geoUtils.js:8-73][358]
 
 Classe d'utils operacions geo
 
-## getFirstSymbolLayerId
+## Map
 
-[src/geo/geoCommon.js:15-24][248]
+[src/geo/map.js:10-231][359]
 
-getFirstSymbolLayerId form MapboxStyle.
-
-### Parameters
-
--   `layers` **[object][191]** Input style object map.getLayers().
-
-Returns **[object][191]** layer.
-
-## getFirstSymbolLayerId
-
-[src/geo/geoCommon.js:201-216][249]
-
-removeAccents form MapboxStyle.
+Map using the mapbox backend
 
 ### Parameters
 
--   `string` **[string][168]** I.
+-   `options` **MapOptions** 
+-   `apiKey` **[string][298]** The api key used by the map
+-   `containerId` **[string][298]** The container id where the map will be drawn
+-   `styleId` **[string][298]** The style id that will be used to draw the map
 
-Returns **[string][168]** string.
+### create
 
-## getEmptyGeoJSON
+[src/geo/map.js:25-41][360]
 
-[src/geo/geoCommon.js:30-35][250]
+Creates the map
 
-Returns **[object][191]** geojson.
+Returns **[Promise][361]&lt;void>** A Promise when the map has been loaded
 
-## getGeoJSONPoint
+### mapCreate
 
-[src/geo/geoCommon.js:42-54][251]
+[src/geo/map.js:50-54][362]
+
+Creates the map object. Implementation specific
+
+#### Parameters
+
+-   `resolve` **[function][363]** The function to call when the map creation succeeds
+-   `reject` **[function][363]** The function to call when the map creation fails
+
+### mapHasLoaded
+
+[src/geo/map.js:61-65][364]
+
+Function called when the map has finished loading. Subclasses must call it before
+setting any data
+
+### remove
+
+[src/geo/map.js:70-78][365]
+
+Removes the map from the element
+
+### mapRemove
+
+[src/geo/map.js:83-87][366]
+
+Removes the map object. Implementation specific
+
+### setOptions
+
+[src/geo/map.js:94-98][367]
+
+Sets the map options
+
+#### Parameters
+
+-   `options` **MapOptions** 
+
+### setData
+
+[src/geo/map.js:105-118][368]
+
+Sets the data to draw
+
+#### Parameters
+
+-   `data` **MapData** 
+
+### addData
+
+[src/geo/map.js:125-137][369]
+
+Adds data to draw to the existing data
+
+#### Parameters
+
+-   `data` **MapData** 
+
+### addMapData
+
+[src/geo/map.js:145-149][370]
+
+Adds data to draw to the existing data. Implementation specific
+
+#### Parameters
+
+-   `data` **MapData** 
+
+### removeMapData
+
+[src/geo/map.js:155-159][371]
+
+Removes all the data from the map. Implementation specific
+
+### subscribe
+
+[src/geo/map.js:169-173][372]
+
+Subscribe to a map event that happens on a layer
+
+#### Parameters
+
+-   `eventName` **[string][298]** The event name
+-   `layerName` **[string][298]** The layer name
+-   `callback` **[Function][363]** The callback to run when the event arrives
+
+### addControlMap
+
+[src/geo/map.js:184-188][373]
+
+AddControl to map map
+
+#### Parameters
+
+-   `controlName` **[string][298]** The event name
+-   `controlOptions` **[object][319]** The layer name
+
+## MapboxMap
+
+[src/geo/mapboxMap.js:13-433][374]
+
+**Extends Map**
+
+Map using the mapbox backend
 
 ### Parameters
 
--   `lng` **float** Longitude.
--   `lat` **float** Latitude.
+-   `mapboxObject` **[Object][319]** 
+-   `apiKey` **[string][298]** The api key used by the map
+-   `options` **MapOptions?** 
+-   `containerId` **[string][298]** The container id where the map will be drawn
+-   `styleId` **[string][298]** The style id that will be used to draw the map
 
-Returns **[object][191]** point geojson.
+### mapCreate
 
-## getRastersSources
+[src/geo/mapboxMap.js:41-53][375]
 
-[src/geo/geoCommon.js:63-72][252]
+-   **See: Map::create
+    **
 
-GetRastersSources from Mapbox Style.
+Creates the map. Do not call directly
+
+#### Parameters
+
+-   `resolve` **[function][363]** The function to call when the map creation succeeds
+-   `reject` **[function][363]** The function to call when the map creation fails
+
+### mapRemove
+
+[src/geo/mapboxMap.js:60-64][376]
+
+-   **See: Map::remove
+    **
+
+Removes the map from the element. Do not call directly
+
+### addMapData
+
+[src/geo/mapboxMap.js:73-103][377]
+
+-   **See: Map::addData
+    **
+
+Adds data to draw to the map. Do not call directly
+
+#### Parameters
+
+-   `data` **MapData** 
+
+### removeMapData
+
+[src/geo/mapboxMap.js:109-119][378]
+
+Removes all the data (sources and layers) from the map. Implementation specific
+
+### hasSourceName
+
+[src/geo/mapboxMap.js:126-130][379]
+
+Checks if the sourceName exists in the map
+
+#### Parameters
+
+-   `sourceName`  
+
+### hasLayerID
+
+[src/geo/mapboxMap.js:136-140][380]
+
+Checks if the layerID exists in the map
+
+#### Parameters
+
+-   `layerID`  
+
+### getStyle
+
+[src/geo/mapboxMap.js:149-153][381]
+
+-   **See: Map::getStyle
+    **
+
+Return the style map.
+
+### getPaintProperty
+
+[src/geo/mapboxMap.js:164-170][382]
+
+-   **See: Map::getPaintProperty
+    **
+
+Return mapStyle.
+
+#### Parameters
+
+-   `layerid` **layerid** 
+-   `property` **property** 
+
+### setMapBaseLayer
+
+[src/geo/mapboxMap.js:178-198][383]
+
+-   **See: Map::setMapBaseLayer
+    **
+
+Sets the data to draw. Do not call directly
+
+#### Parameters
+
+-   `baseLayerURL` **[string][298]** 
+-   `url` **baseLayr** 
+
+### fitBBOX
+
+[src/geo/mapboxMap.js:205-211][384]
+
+Fit a map to a bounding box
+
+#### Parameters
+
+-   `bbox`  
+-   `pitch`   (optional, default `0`)
+-   `Array` **bbox** "bbox":"1.079053,41.290767,1.104497,41.308387"
+
+### setFilter
+
+[src/geo/mapboxMap.js:338-342][385]
+
+SetFilters
+
+#### Parameters
+
+-   `layer`  
+-   `filter`  
+
+### getFilter
+
+[src/geo/mapboxMap.js:350-354][386]
+
+return filter getFilter
+
+#### Parameters
+
+-   `layer`  
+
+### setAPIKey
+
+[src/geo/mapboxMap.js:376-380][387]
+
+Sets the API key used by the map
+
+#### Parameters
+
+-   `apiKey` **[string][298]** 
+
+### subscribe
+
+[src/geo/mapboxMap.js:389-401][388]
+
+Subscribe to a map event that happens on a layer
+
+#### Parameters
+
+-   `eventName` **[string][298]** The event name
+-   `layerName` **[string][298]** The layer name
+-   `callback` **[Function][363]** The callback to run when the event arrives
+
+### queryRenderedFeatures
+
+[src/geo/mapboxMap.js:416-420][389]
+
+Queries the rendered features in a point or a bbox
+
+#### Parameters
+
+-   `place` **(PointLike | [Array][315]&lt;PointLike>)?** 
+-   `layer` **[string][298]** 
+
+### setCursor
+
+[src/geo/mapboxMap.js:427-431][390]
+
+Changes the cursor type
+
+#### Parameters
+
+-   `name` **[string][298]** 
+
+## UtilsStatics
+
+[src/geo/utilsStatics.js:6-90][391]
+
+Classe d'utils dades estadístiques
+
+## JsonToMap
+
+[src/map/jsonToMap.js:12-176][392]
+
+Parse information from JSON.
 
 ### Parameters
 
--   `sources` **[object][191]** Input sources object map.getSources().
--   `rasterSources` **[object][191]** Output raster sources.
+-   `Json` **[object][319]** Optional
 
-Returns **[object][191]** rasterSources
+### Examples
 
-## simplifyStyle
+```javascript
+Sample;
+const jsonToMap = new JsonToMap();
+```
 
-[src/geo/geoCommon.js:80-152][253]
+## MapStyle
 
-Simplify from Mapbox Style.
+[src/map/mapStyle.js:19-900][393]
 
-### Parameters
-
--   `currentStyle` **[object][191]** Input styke object map.getStyle().
--   `esriFy` **[boolean][219]** Optimize for Esri Styles.
--   `nonAddVisibilityNone` **[boolean][219]**  add or  no Layers visibility:none
-
-Returns **[object][191]** Mapbox Style
-
-## isWithinCat
-
-[src/geo/geoCommon.js:223-485][254]
-
-isWithinCat check if a bbox is within Catalonia.
+A `MapStyle` create a tematic style from GeoJson data, CSV o just an Array.
 
 ### Parameters
 
--   `bbox` **[array][208]** Input map.getBounds().toArray() or [1.4622,41.7139 ,1.8117 ,42.0330].
+-   `geoJSON` **[object][319]** GeoJSON data or URL.
 
-Returns **[boolean][219]** 
+### Examples
 
-## isInsideCat
+```javascript
+const geo = new MapStyle(geojson);
+```
 
-[src/geo/geoCommon.js:161-173][255]
+### getGeomTypeFromGeoJSON
 
-X,Y coordinates inside Catalonia BBOX.
+[src/map/mapStyle.js:108-128][394]
+
+Returns geomType from first fetaure geometry in Geojson
+
+Returns **[string][298]** 
+
+### getFieldNamesColumnFromGEOJSON
+
+[src/map/mapStyle.js:137-189][395]
+
+Returns Array title fields
+
+Returns **[array][315]** 
+
+### getImplementedLayerTypes
+
+[src/map/mapStyle.js:198-212][396]
+
+Returns object with type MapboxGL layers implemented
+
+Returns **[object][319]** 
+
+### getFilterByDefault
+
+[src/map/mapStyle.js:233-237][397]
+
+Returns filter null values mapboxGL
+
+#### Parameters
+
+-   `keyField` **[string][298]** 
+-   `tematicField` **[string][298]** 
+
+#### Examples
+
+```javascript
+MapStyle.getFilterByDefault("temp")
+```
+
+Returns **filterExpression** `this`
+
+### generateGeoStatisticsFromField
+
+[src/map/mapStyle.js:248-264][398]
+
+Return geostatistics object
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+
+#### Examples
+
+```javascript
+MapStyle.generateGeoStatisticsFromField("temp")
+```
+
+Returns **geostatstics** `this`
+
+### createStyleLayer
+
+[src/map/mapStyle.js:279-461][399]
+
+Create MapBox GL init style layerNamer
+
+#### Parameters
+
+-   `sourceName` **[string][298]** 
+-   `layerName` **[string][298]** : theMapbox gl layer ID
+-   `keyField` **[string][298]** :The fieldName fromGeoJSON
+-   `type` **[string][298]** : tthe geomType see getImplementedLayerTypes function
+-   `maxzoom` **[number][293]** 
+-   `minzoom` **[number][293]** 
+-   `initColor` **[string][298]** 
+-   `visualization` **[string][298]** 
+-   `factor` **[number][293]** 
+-   `SorceName` **[string][298]** : the Mapbox gl source ID
+
+Returns **[object][319]** 
+
+### setStyleFromPreDefinedRamTemperatureHeights
+
+[src/map/mapStyle.js:472-480][400]
+
+Return predefined style
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+
+Returns **[object][319]** 
+
+### setStyleFromPreDefinedRamTemperatureInterpolateHeights
+
+[src/map/mapStyle.js:490-500][401]
+
+Return predefined style
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+
+Returns **[object][319]** 
+
+### setStyleTextSizeByFactorSize
+
+[src/map/mapStyle.js:511-529][402]
+
+Return factor textsize
+
+#### Parameters
+
+-   `factorSize` **[number][293]** 
+
+Returns **stylePre** 
+
+### setStyleFromPreDefinedRamTemperatureColor
+
+[src/map/mapStyle.js:539-547][403]
+
+Return predefined style
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+
+Returns **[object][319]** 
+
+### setStylesFromPredefinedScales
+
+[src/map/mapStyle.js:559-636][404]
+
+Return predefined styles from array
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+-   `scaleName` **[string][298]** 
+
+Returns **[object][319]** 
+
+### setStylesPaintFromRanges
+
+[src/map/mapStyle.js:659-666][405]
+
+Returns style-color mapboxGL by Ranges
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+-   `numRanges` **[number][293]** 
+-   `colorsPalette` **[object][319]** 
+-   `textHaloColor` **[boolean][327]**  (optional, default `false`)
+
+#### Examples
+
+```javascript
+MapStyle.setStylesPaintFromRanges("temp",6, "BuGn")
+```
+
+Returns **paintStyle** `this`
+
+### setStylebyFactorHeights
+
+[src/map/mapStyle.js:678-686][406]
+
+Returns style-extrude-heigths mapboxGL by factor \* fieldvalue
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+-   `factorHeight` **[number][293]** 
+-   `factor` **[number][293]** 
+
+#### Examples
+
+```javascript
+MapStyle.setStylebyFactorHeights("temp",10)
+```
+
+Returns **stylePre** `this`
+
+### getFieldType
+
+[src/map/mapStyle.js:799-819][407]
+
+Returns field type number or string
+
+#### Parameters
+
+-   `fieldName` **[string][298]** 
+
+#### Examples
+
+```javascript
+MapStyle.getFieldType("temp")
+```
+
+Returns **[string][298]** `this`
+
+### getExtendFromGeoJSON
+
+[src/map/mapStyle.js:826-831][408]
+
+Returns BBOX estenc from geojson
+
+Returns **[array][315]** `bbox`
+
+### getHaloStyleColors
+
+[src/map/mapStyle.js:840-844][409]
+
+Returns Halo colors
+
+Returns **[array][315]** `haloTextColors`
+
+### setStylePaintFromUniquesValues
+
+[src/map/mapStyle.js:859-898][410]
+
+Returns style-color mapboxGL
+
+#### Parameters
+
+-   `tematicField` **[string][298]** 
+-   `initColor` **[string][298]** 
+-   `endColor` **[string][298]** 
+-   `type` **[string][298]** \`type number or string"
+
+#### Examples
+
+```javascript
+MapStyle.setStylePaintFromUniquesValues("comarca","#ffCC00", "#00CCff")
+```
+
+Returns **paintStyle** `this`
+
+## Request
+
+[src/Request.js:8-117][411]
+
+Request functions
+
+### processResponse
+
+[src/Request.js:16-37][412]
+
+Processes a request response checking if the results are ok
+and resolves or rejects accordingly
+
+#### Parameters
+
+-   `response` **[Object][319]** 
+-   `resolve` **[Function][363]** 
+-   `reject` **[Function][363]** 
+
+### processResponse
+
+[src/request.js:16-37][413]
+
+Processes a request response checking if the results are ok
+and resolves or rejects accordingly
+
+#### Parameters
+
+-   `response` **[Object][319]** 
+-   `resolve` **[Function][363]** 
+-   `reject` **[Function][363]** 
+
+### get
+
+[src/Request.js:50-60][414]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made including protocol
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### get
+
+[src/request.js:50-60][415]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made including protocol
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### delete
+
+[src/Request.js:68-78][416]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### delete
+
+[src/request.js:68-78][417]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### post
+
+[src/Request.js:87-97][418]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### post
+
+[src/request.js:87-97][419]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### put
+
+[src/Request.js:105-115][420]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### put
+
+[src/request.js:105-115][421]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+## Request
+
+[src/request.js:8-117][422]
+
+Request functions
+
+### processResponse
+
+[src/Request.js:16-37][412]
+
+Processes a request response checking if the results are ok
+and resolves or rejects accordingly
+
+#### Parameters
+
+-   `response` **[Object][319]** 
+-   `resolve` **[Function][363]** 
+-   `reject` **[Function][363]** 
+
+### processResponse
+
+[src/request.js:16-37][413]
+
+Processes a request response checking if the results are ok
+and resolves or rejects accordingly
+
+#### Parameters
+
+-   `response` **[Object][319]** 
+-   `resolve` **[Function][363]** 
+-   `reject` **[Function][363]** 
+
+### get
+
+[src/Request.js:50-60][414]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made including protocol
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### get
+
+[src/request.js:50-60][415]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made including protocol
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### delete
+
+[src/Request.js:68-78][416]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### delete
+
+[src/request.js:68-78][417]
+
+Does a get request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the get request should be made
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### post
+
+[src/Request.js:87-97][418]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### post
+
+[src/request.js:87-97][419]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### put
+
+[src/Request.js:105-115][420]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+### put
+
+[src/request.js:105-115][421]
+
+Does a post request
+
+#### Parameters
+
+-   `url` **[string][298]** The URL where the post should be made
+-   `data` **any** The data to send in the post request
+
+Returns **[Promise][361]&lt;[Object][319]>** 
+
+## removeItem
+
+[src/utils.js:13-19][423]
+
+Remove the item at the specified position
 
 ### Parameters
 
--   `x` **float** Longitude.
--   `y` **float** Latitude.
+-   `items` **[array][315]** array.
+-   `position` **[number][293]** position of the element to remove, starting from 1.
 
-Returns **[boolean][219]** 
+Returns **[array][315]** return a new array, without modifying the original
 
-## usedSource
+## applyFunctoDataArray
 
-[src/geo/geoCommon.js:181-192][256]
+[src/utils.js:28-38][424]
 
-Check is a Source is Used.
+Apply a function to each item of the array
 
 ### Parameters
 
--   `source` **[object][191]** Input style object map.getSources().
--   `layersArray` **[object][191]** Input stlke object map.getLayers().
+-   `arr` **[array][315]** array.
+-   `fn` **[function][363]** function to apply to each item of the array
 
-Returns **[boolean][219]** 
+## isEmptyObject
+
+[src/utils.js:83-96][425]
+
+Check if an object is empty
+
+### Parameters
+
+-   `obj` **[Object][319]** 
+
+Returns **[boolean][327]** true in case the object is empty, false otherwise
+
+## debounce
+
+[src/utils.js:105-119][426]
+
+Debounce function for more efficient event handling
+
+### Parameters
+
+-   `fn` **[function][363]** 
+-   `delay` **[number][293]** number of milisiconds of delay
+
+Returns **[function][363]** debounce function
+
+## debounceImmediate
+
+[src/utils.js:129-176][427]
+
+Debounce function for more efficient event handling
+
+### Parameters
+
+-   `func`  
+-   `wait`  
+-   `immediate` **[boolean][327]** executes de function fn immediatly or not
+-   `fn` **[function][363]** 
+-   `delay` **[number][293]** number of milisiconds of delay
+
+Returns **[function][363]** debounce function
+
+## bindAll
+
+[src/utils.js:188-201][428]
+
+Given an array of member function names as strings, replace all of them
+with bound versions that will always refer to `context` as `this`. This
+is useful for classes where otherwise event bindings would reassign
+`this` to the evented object or some other value: this lets you ensure
+the `this` value always.
+
+### Parameters
+
+-   `fns` **[Array][315]&lt;[string][298]>** list of member function names
+-   `context` **[Object][319]** the context value
+
+Returns **void** 
 
 [1]: #geography--geometry
 
@@ -1244,472 +2085,816 @@ Returns **[boolean][219]**
 
 [21]: #getnortheast
 
-[22]: #map
+[22]: #colorizator
 
 [23]: #parameters-6
 
-[24]: #create
+[24]: #examples-4
 
-[25]: #mapcreate
+[25]: #getrandomcolorfromarray
 
-[26]: #parameters-7
+[26]: #getrandomcolor
 
-[27]: #maphasloaded
+[27]: #getcolorarrayfrompositionbrewer
 
-[28]: #remove
+[28]: #parameters-7
 
-[29]: #mapremove
+[29]: #getcolorsscaleranges
 
-[30]: #setoptions
+[30]: #parameters-8
 
-[31]: #parameters-8
+[31]: #gethslnicecolor
 
-[32]: #setdata
+[32]: #parameters-9
 
-[33]: #parameters-9
+[33]: #getcolorarrayfromselectedbrewer
 
-[34]: #adddata
+[34]: #parameters-10
 
-[35]: #parameters-10
+[35]: #generatehtmlbrewerpalettes
 
-[36]: #addmapdata
+[36]: #parameters-11
 
-[37]: #parameters-11
+[37]: #generatehtmllegendcolor
 
-[38]: #removemapdata
+[38]: #parameters-12
 
-[39]: #subscribe
+[39]: #arraystatics
 
-[40]: #parameters-12
+[40]: #parameters-13
 
-[41]: #addcontrolmap
+[41]: #examples-5
 
-[42]: #parameters-13
+[42]: #getuniquevalues
 
-[43]: #mapboxmap
+[43]: #getbasicsstats
 
 [44]: #parameters-14
 
-[45]: #mapcreate-1
+[45]: #getstatsfromrangescolorsarray
 
 [46]: #parameters-15
 
-[47]: #mapremove-1
+[47]: #bridgestatics
 
-[48]: #addmapdata-1
+[48]: #parameters-16
 
-[49]: #parameters-16
+[49]: #examples-6
 
-[50]: #removemapdata-1
+[50]: #bridgestatics-1
 
-[51]: #hassourcename
+[51]: #parameters-17
 
-[52]: #parameters-17
+[52]: #examples-7
 
-[53]: #haslayerid
+[53]: #csvstatics
 
 [54]: #parameters-18
 
-[55]: #getstyle
+[55]: #examples-8
 
-[56]: #getpaintproperty
+[56]: #getuniquevalues-1
 
-[57]: #parameters-19
+[57]: #getstatsfromrangescolorscsv
 
-[58]: #setmapbaselayer
+[58]: #parameters-19
 
-[59]: #parameters-20
+[59]: #getcolumfromcsv
 
-[60]: #fitbbox
+[60]: #parameters-20
 
-[61]: #parameters-21
+[61]: #geocommons
 
-[62]: #setfilter
+[62]: #getrasterssources
 
-[63]: #parameters-22
+[63]: #parameters-21
 
-[64]: #getfilter
+[64]: #getrasterssources-1
 
-[65]: #parameters-23
+[65]: #parameters-22
 
-[66]: #setapikey
+[66]: #simplifystyle
 
-[67]: #parameters-24
+[67]: #parameters-23
 
-[68]: #subscribe-1
+[68]: #simplifystyle-1
 
-[69]: #parameters-25
+[69]: #parameters-24
 
-[70]: #queryrenderedfeatures
+[70]: #iswithincat
 
-[71]: #parameters-26
+[71]: #parameters-25
 
-[72]: #setcursor
+[72]: #iswithincat-1
 
-[73]: #parameters-27
+[73]: #parameters-26
 
-[74]: #request
+[74]: #geocommons-1
 
-[75]: #processresponse
+[75]: #getrasterssources-2
 
-[76]: #parameters-28
+[76]: #parameters-27
 
-[77]: #get
+[77]: #getrasterssources-3
 
-[78]: #parameters-29
+[78]: #parameters-28
 
-[79]: #delete
+[79]: #simplifystyle-2
 
-[80]: #parameters-30
+[80]: #parameters-29
 
-[81]: #post
+[81]: #simplifystyle-3
 
-[82]: #parameters-31
+[82]: #parameters-30
 
-[83]: #put
+[83]: #iswithincat-2
 
-[84]: #parameters-32
+[84]: #parameters-31
 
-[85]: #removeitem
+[85]: #iswithincat-3
 
-[86]: #parameters-33
+[86]: #parameters-32
 
-[87]: #applyfunctodataarray
+[87]: #getfirstsymbollayerid
 
-[88]: #parameters-34
+[88]: #parameters-33
 
-[89]: #isemptyobject
+[89]: #getfirstsymbollayerid-1
 
-[90]: #parameters-35
+[90]: #parameters-34
 
-[91]: #debounce
+[91]: #getfirstsymbollayerid-2
 
-[92]: #parameters-36
+[92]: #parameters-35
 
-[93]: #debounceimmediate
+[93]: #getfirstsymbollayerid-3
 
-[94]: #parameters-37
+[94]: #parameters-36
 
-[95]: #bindall
+[95]: #getemptygeojson
 
-[96]: #parameters-38
+[96]: #getemptygeojson-1
 
-[97]: #colorizator
+[97]: #getgeojsonpoint
 
-[98]: #parameters-39
+[98]: #parameters-37
 
-[99]: #examples-4
+[99]: #getgeojsonpoint-1
 
-[100]: #getrandomcolorfromarray
+[100]: #parameters-38
 
-[101]: #getrandomcolor
+[101]: #isinsidecat
 
-[102]: #getcolorarrayfrompositionbrewer
+[102]: #parameters-39
 
-[103]: #parameters-40
+[103]: #isinsidecat-1
 
-[104]: #getcolorsscaleranges
+[104]: #parameters-40
 
-[105]: #parameters-41
+[105]: #usedsource
 
-[106]: #gethslnicecolor
+[106]: #parameters-41
 
-[107]: #parameters-42
+[107]: #usedsource-1
 
-[108]: #getcolorarrayfromselectedbrewer
+[108]: #parameters-42
 
-[109]: #parameters-43
+[109]: #geojsonstatistics
 
-[110]: #generatehtmlbrewerpalettes
+[110]: #parameters-43
 
-[111]: #parameters-44
+[111]: #examples-9
 
-[112]: #generatehtmllegendcolor
+[112]: #getuniquevalues-2
 
-[113]: #parameters-45
+[113]: #getuniquevalues-3
 
-[114]: #arraystatics
+[114]: #getstatsfromrangescolorsgeojson
 
-[115]: #parameters-46
+[115]: #parameters-44
 
-[116]: #examples-5
+[116]: #getstatsfromrangescolorsgeojson-1
 
-[117]: #getuniquevalues
+[117]: #parameters-45
 
-[118]: #getbasicsstats
+[118]: #getcolumnfromgeojson
 
-[119]: #parameters-47
+[119]: #parameters-46
 
-[120]: #getstatsfromrangescolorsarray
+[120]: #getcolumnfromgeojson-1
 
-[121]: #parameters-48
+[121]: #parameters-47
 
-[122]: #bridgestatics
+[122]: #_getcolumfromgeojsonfilter
 
-[123]: #parameters-49
+[123]: #parameters-48
 
-[124]: #examples-6
+[124]: #_getcolumfromgeojsonfilter-1
 
-[125]: #csvstatics
+[125]: #parameters-49
 
-[126]: #parameters-50
+[126]: #geojsonstatistics-1
 
-[127]: #examples-7
+[127]: #parameters-50
 
-[128]: #getuniquevalues-1
+[128]: #examples-10
 
-[129]: #getstatsfromrangescolorscsv
+[129]: #getuniquevalues-4
 
-[130]: #parameters-51
+[130]: #getuniquevalues-5
 
-[131]: #getcolumfromcsv
+[131]: #getstatsfromrangescolorsgeojson-2
 
-[132]: #parameters-52
+[132]: #parameters-51
 
-[133]: #geojsonstatistics
+[133]: #getstatsfromrangescolorsgeojson-3
 
-[134]: #parameters-53
+[134]: #parameters-52
 
-[135]: #examples-8
+[135]: #getcolumnfromgeojson-2
 
-[136]: #getuniquevalues-2
+[136]: #parameters-53
 
-[137]: #getstatsfromrangescolorsgeojson
+[137]: #getcolumnfromgeojson-3
 
 [138]: #parameters-54
 
-[139]: #getcolumnfromgeojson
+[139]: #_getcolumfromgeojsonfilter-2
 
 [140]: #parameters-55
 
-[141]: #_getcolumfromgeojsonfilter
+[141]: #_getcolumfromgeojsonfilter-3
 
 [142]: #parameters-56
 
-[143]: #utilsstatics
+[143]: #geoutils
 
-[144]: #geoutils
+[144]: #map
 
-[145]: #getfirstsymbollayerid
+[145]: #parameters-57
 
-[146]: #parameters-57
+[146]: #create
 
-[147]: #getfirstsymbollayerid-1
+[147]: #mapcreate
 
 [148]: #parameters-58
 
-[149]: #getemptygeojson
+[149]: #maphasloaded
 
-[150]: #getgeojsonpoint
+[150]: #remove
 
-[151]: #parameters-59
+[151]: #mapremove
 
-[152]: #getrasterssources
+[152]: #setoptions
 
-[153]: #parameters-60
+[153]: #parameters-59
 
-[154]: #simplifystyle
+[154]: #setdata
 
-[155]: #parameters-61
+[155]: #parameters-60
 
-[156]: #iswithincat
+[156]: #adddata
 
-[157]: #parameters-62
+[157]: #parameters-61
 
-[158]: #isinsidecat
+[158]: #addmapdata
 
-[159]: #parameters-63
+[159]: #parameters-62
 
-[160]: #usedsource
+[160]: #removemapdata
 
-[161]: #parameters-64
+[161]: #subscribe
 
-[162]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlon.js#L12-L79 "Source code on GitHub"
+[162]: #parameters-63
 
-[163]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[163]: #addcontrolmap
 
-[164]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlon.js#L45-L50 "Source code on GitHub"
+[164]: #parameters-64
 
-[165]: #latlon
+[165]: #mapboxmap
 
-[166]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlon.js#L58-L63 "Source code on GitHub"
+[166]: #parameters-65
 
-[167]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlon.js#L73-L77 "Source code on GitHub"
+[167]: #mapcreate-1
 
-[168]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[168]: #parameters-66
 
-[169]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlonBounds.js#L17-L88 "Source code on GitHub"
+[169]: #mapremove-1
 
-[170]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlonBounds.js#L32-L37 "Source code on GitHub"
+[170]: #addmapdata-1
 
-[171]: #latlonbounds
+[171]: #parameters-67
 
-[172]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlonBounds.js#L45-L50 "Source code on GitHub"
+[172]: #removemapdata-1
 
-[173]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlonBounds.js#L60-L64 "Source code on GitHub"
+[173]: #hassourcename
 
-[174]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlonBounds.js#L71-L75 "Source code on GitHub"
+[174]: #parameters-68
 
-[175]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/latlonBounds.js#L82-L86 "Source code on GitHub"
+[175]: #haslayerid
 
-[176]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L10-L231 "Source code on GitHub"
+[176]: #parameters-69
 
-[177]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L25-L41 "Source code on GitHub"
+[177]: #getstyle
 
-[178]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[178]: #getpaintproperty
 
-[179]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L50-L54 "Source code on GitHub"
+[179]: #parameters-70
 
-[180]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[180]: #setmapbaselayer
 
-[181]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L61-L65 "Source code on GitHub"
+[181]: #parameters-71
 
-[182]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L70-L78 "Source code on GitHub"
+[182]: #fitbbox
 
-[183]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L83-L87 "Source code on GitHub"
+[183]: #parameters-72
 
-[184]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L94-L98 "Source code on GitHub"
+[184]: #setfilter
 
-[185]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L105-L118 "Source code on GitHub"
+[185]: #parameters-73
 
-[186]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L125-L137 "Source code on GitHub"
+[186]: #getfilter
 
-[187]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L145-L149 "Source code on GitHub"
+[187]: #parameters-74
 
-[188]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L155-L159 "Source code on GitHub"
+[188]: #setapikey
 
-[189]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L169-L173 "Source code on GitHub"
+[189]: #parameters-75
 
-[190]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/map.js#L184-L188 "Source code on GitHub"
+[190]: #subscribe-1
 
-[191]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[191]: #parameters-76
 
-[192]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L13-L433 "Source code on GitHub"
+[192]: #queryrenderedfeatures
 
-[193]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L41-L53 "Source code on GitHub"
+[193]: #parameters-77
 
-[194]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L60-L64 "Source code on GitHub"
+[194]: #setcursor
 
-[195]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L73-L103 "Source code on GitHub"
+[195]: #parameters-78
 
-[196]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L109-L119 "Source code on GitHub"
+[196]: #utilsstatics
 
-[197]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L126-L130 "Source code on GitHub"
+[197]: #jsontomap
 
-[198]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L136-L140 "Source code on GitHub"
+[198]: #parameters-79
 
-[199]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L149-L153 "Source code on GitHub"
+[199]: #examples-11
 
-[200]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L164-L170 "Source code on GitHub"
+[200]: #mapstyle
 
-[201]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L178-L198 "Source code on GitHub"
+[201]: #parameters-80
 
-[202]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L205-L211 "Source code on GitHub"
+[202]: #examples-12
 
-[203]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L338-L342 "Source code on GitHub"
+[203]: #getgeomtypefromgeojson
 
-[204]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L350-L354 "Source code on GitHub"
+[204]: #getfieldnamescolumnfromgeojson
 
-[205]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L376-L380 "Source code on GitHub"
+[205]: #getimplementedlayertypes
 
-[206]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L389-L401 "Source code on GitHub"
+[206]: #getfilterbydefault
 
-[207]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L416-L420 "Source code on GitHub"
+[207]: #parameters-81
 
-[208]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[208]: #examples-13
 
-[209]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/mapboxMap.js#L427-L431 "Source code on GitHub"
+[209]: #generategeostatisticsfromfield
 
-[210]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/request.js#L8-L117 "Source code on GitHub"
+[210]: #parameters-82
 
-[211]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/request.js#L16-L37 "Source code on GitHub"
+[211]: #examples-14
 
-[212]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/request.js#L50-L60 "Source code on GitHub"
+[212]: #createstylelayer
 
-[213]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/request.js#L68-L78 "Source code on GitHub"
+[213]: #parameters-83
 
-[214]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/request.js#L87-L97 "Source code on GitHub"
+[214]: #setstylefrompredefinedramtemperatureheights
 
-[215]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/request.js#L105-L115 "Source code on GitHub"
+[215]: #parameters-84
 
-[216]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/utils.js#L13-L19 "Source code on GitHub"
+[216]: #setstylefrompredefinedramtemperatureinterpolateheights
 
-[217]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/utils.js#L28-L38 "Source code on GitHub"
+[217]: #parameters-85
 
-[218]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/utils.js#L83-L96 "Source code on GitHub"
+[218]: #setstyletextsizebyfactorsize
 
-[219]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[219]: #parameters-86
 
-[220]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/utils.js#L105-L119 "Source code on GitHub"
+[220]: #setstylefrompredefinedramtemperaturecolor
 
-[221]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/utils.js#L129-L176 "Source code on GitHub"
+[221]: #parameters-87
 
-[222]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/utils.js#L188-L201 "Source code on GitHub"
+[222]: #setstylesfrompredefinedscales
 
-[223]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L16-L349 "Source code on GitHub"
+[223]: #parameters-88
 
-[224]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L36-L50 "Source code on GitHub"
+[224]: #setstylespaintfromranges
 
-[225]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L58-L71 "Source code on GitHub"
+[225]: #parameters-89
 
-[226]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L120-L125 "Source code on GitHub"
+[226]: #examples-15
 
-[227]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L135-L147 "Source code on GitHub"
+[227]: #setstylebyfactorheights
 
-[228]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L155-L161 "Source code on GitHub"
+[228]: #parameters-90
 
-[229]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L210-L215 "Source code on GitHub"
+[229]: #examples-16
 
-[230]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L232-L270 "Source code on GitHub"
+[230]: #getfieldtype
 
-[231]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/color/colorizator.js#L282-L347 "Source code on GitHub"
+[231]: #parameters-91
 
-[232]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/arrayStatics.js#L16-L102 "Source code on GitHub"
+[232]: #examples-17
 
-[233]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/arrayStatics.js#L45-L49 "Source code on GitHub"
+[233]: #getextendfromgeojson
 
-[234]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/arrayStatics.js#L59-L68 "Source code on GitHub"
+[234]: #gethalostylecolors
 
-[235]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/arrayStatics.js#L79-L99 "Source code on GitHub"
+[235]: #setstylepaintfromuniquesvalues
 
-[236]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/bridgeStatics.js#L12-L122 "Source code on GitHub"
+[236]: #parameters-92
 
-[237]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/csvStatics.js#L21-L137 "Source code on GitHub"
+[237]: #examples-18
 
-[238]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/csvStatics.js#L52-L56 "Source code on GitHub"
+[238]: #request
 
-[239]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/csvStatics.js#L66-L84 "Source code on GitHub"
+[239]: #processresponse
 
-[240]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/csvStatics.js#L95-L134 "Source code on GitHub"
+[240]: #parameters-93
 
-[241]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoJSONStatics.js#L16-L175 "Source code on GitHub"
+[241]: #processresponse-1
 
-[242]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoJSONStatics.js#L49-L54 "Source code on GitHub"
+[242]: #parameters-94
 
-[243]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoJSONStatics.js#L65-L84 "Source code on GitHub"
+[243]: #get
 
-[244]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoJSONStatics.js#L95-L141 "Source code on GitHub"
+[244]: #parameters-95
 
-[245]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoJSONStatics.js#L154-L173 "Source code on GitHub"
+[245]: #get-1
 
-[246]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/utilsStatics.js#L6-L90 "Source code on GitHub"
+[246]: #parameters-96
 
-[247]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoUtils.js#L8-L73 "Source code on GitHub"
+[247]: #delete
 
-[248]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L15-L24 "Source code on GitHub"
+[248]: #parameters-97
 
-[249]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L201-L216 "Source code on GitHub"
+[249]: #delete-1
 
-[250]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L30-L35 "Source code on GitHub"
+[250]: #parameters-98
 
-[251]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L42-L54 "Source code on GitHub"
+[251]: #post
 
-[252]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L63-L72 "Source code on GitHub"
+[252]: #parameters-99
 
-[253]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L80-L152 "Source code on GitHub"
+[253]: #post-1
 
-[254]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L223-L485 "Source code on GitHub"
+[254]: #parameters-100
 
-[255]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L161-L173 "Source code on GitHub"
+[255]: #put
 
-[256]: https://github.com/geostarters/icgc-js-common/blob/443b31eb02a4f2e17d7f04c49cfbe7e455db6262/src/geo/geoCommon.js#L181-L192 "Source code on GitHub"
+[256]: #parameters-101
+
+[257]: #put-1
+
+[258]: #parameters-102
+
+[259]: #request-1
+
+[260]: #processresponse-2
+
+[261]: #parameters-103
+
+[262]: #processresponse-3
+
+[263]: #parameters-104
+
+[264]: #get-2
+
+[265]: #parameters-105
+
+[266]: #get-3
+
+[267]: #parameters-106
+
+[268]: #delete-2
+
+[269]: #parameters-107
+
+[270]: #delete-3
+
+[271]: #parameters-108
+
+[272]: #post-2
+
+[273]: #parameters-109
+
+[274]: #post-3
+
+[275]: #parameters-110
+
+[276]: #put-2
+
+[277]: #parameters-111
+
+[278]: #put-3
+
+[279]: #parameters-112
+
+[280]: #removeitem
+
+[281]: #parameters-113
+
+[282]: #applyfunctodataarray
+
+[283]: #parameters-114
+
+[284]: #isemptyobject
+
+[285]: #parameters-115
+
+[286]: #debounce
+
+[287]: #parameters-116
+
+[288]: #debounceimmediate
+
+[289]: #parameters-117
+
+[290]: #bindall
+
+[291]: #parameters-118
+
+[292]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlon.js#L12-L79 "Source code on GitHub"
+
+[293]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[294]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlon.js#L45-L50 "Source code on GitHub"
+
+[295]: #latlon
+
+[296]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlon.js#L58-L63 "Source code on GitHub"
+
+[297]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlon.js#L73-L77 "Source code on GitHub"
+
+[298]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[299]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlonBounds.js#L17-L88 "Source code on GitHub"
+
+[300]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlonBounds.js#L32-L37 "Source code on GitHub"
+
+[301]: #latlonbounds
+
+[302]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlonBounds.js#L45-L50 "Source code on GitHub"
+
+[303]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlonBounds.js#L60-L64 "Source code on GitHub"
+
+[304]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlonBounds.js#L71-L75 "Source code on GitHub"
+
+[305]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/latlonBounds.js#L82-L86 "Source code on GitHub"
+
+[306]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L16-L349 "Source code on GitHub"
+
+[307]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L36-L50 "Source code on GitHub"
+
+[308]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L58-L71 "Source code on GitHub"
+
+[309]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L120-L125 "Source code on GitHub"
+
+[310]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L135-L147 "Source code on GitHub"
+
+[311]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L155-L161 "Source code on GitHub"
+
+[312]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L210-L215 "Source code on GitHub"
+
+[313]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L232-L270 "Source code on GitHub"
+
+[314]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/color/colorizator.js#L282-L347 "Source code on GitHub"
+
+[315]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[316]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/arrayStatics.js#L16-L102 "Source code on GitHub"
+
+[317]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/arrayStatics.js#L45-L49 "Source code on GitHub"
+
+[318]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/arrayStatics.js#L59-L68 "Source code on GitHub"
+
+[319]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[320]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/arrayStatics.js#L79-L99 "Source code on GitHub"
+
+[321]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/bridgeStatics.js#L12-L122 "Source code on GitHub"
+
+[322]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/BridgeStatics.js#L12-L122 "Source code on GitHub"
+
+[323]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/csvStatics.js#L21-L137 "Source code on GitHub"
+
+[324]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/csvStatics.js#L52-L56 "Source code on GitHub"
+
+[325]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/csvStatics.js#L66-L84 "Source code on GitHub"
+
+[326]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/csvStatics.js#L95-L134 "Source code on GitHub"
+
+[327]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[328]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L10-L491 "Source code on GitHub"
+
+[329]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L66-L75 "Source code on GitHub"
+
+[330]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L66-L75 "Source code on GitHub"
+
+[331]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L83-L155 "Source code on GitHub"
+
+[332]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L83-L155 "Source code on GitHub"
+
+[333]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L226-L488 "Source code on GitHub"
+
+[334]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L226-L488 "Source code on GitHub"
+
+[335]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L10-L491 "Source code on GitHub"
+
+[336]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L18-L27 "Source code on GitHub"
+
+[337]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L204-L219 "Source code on GitHub"
+
+[338]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L18-L27 "Source code on GitHub"
+
+[339]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L204-L219 "Source code on GitHub"
+
+[340]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L33-L38 "Source code on GitHub"
+
+[341]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L33-L38 "Source code on GitHub"
+
+[342]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L45-L57 "Source code on GitHub"
+
+[343]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L45-L57 "Source code on GitHub"
+
+[344]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L164-L176 "Source code on GitHub"
+
+[345]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L164-L176 "Source code on GitHub"
+
+[346]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoCommons.js#L184-L195 "Source code on GitHub"
+
+[347]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoCommons.js#L184-L195 "Source code on GitHub"
+
+[348]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoJSONStatics.js#L16-L175 "Source code on GitHub"
+
+[349]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoJSONStatics.js#L49-L54 "Source code on GitHub"
+
+[350]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoJSONStatics.js#L49-L54 "Source code on GitHub"
+
+[351]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoJSONStatics.js#L65-L84 "Source code on GitHub"
+
+[352]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoJSONStatics.js#L65-L84 "Source code on GitHub"
+
+[353]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoJSONStatics.js#L95-L141 "Source code on GitHub"
+
+[354]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoJSONStatics.js#L95-L141 "Source code on GitHub"
+
+[355]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoJSONStatics.js#L154-L173 "Source code on GitHub"
+
+[356]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoJSONStatics.js#L154-L173 "Source code on GitHub"
+
+[357]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/GeoJSONStatics.js#L16-L175 "Source code on GitHub"
+
+[358]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/geoUtils.js#L8-L73 "Source code on GitHub"
+
+[359]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L10-L231 "Source code on GitHub"
+
+[360]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L25-L41 "Source code on GitHub"
+
+[361]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+[362]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L50-L54 "Source code on GitHub"
+
+[363]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+
+[364]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L61-L65 "Source code on GitHub"
+
+[365]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L70-L78 "Source code on GitHub"
+
+[366]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L83-L87 "Source code on GitHub"
+
+[367]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L94-L98 "Source code on GitHub"
+
+[368]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L105-L118 "Source code on GitHub"
+
+[369]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L125-L137 "Source code on GitHub"
+
+[370]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L145-L149 "Source code on GitHub"
+
+[371]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L155-L159 "Source code on GitHub"
+
+[372]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L169-L173 "Source code on GitHub"
+
+[373]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/map.js#L184-L188 "Source code on GitHub"
+
+[374]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L13-L433 "Source code on GitHub"
+
+[375]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L41-L53 "Source code on GitHub"
+
+[376]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L60-L64 "Source code on GitHub"
+
+[377]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L73-L103 "Source code on GitHub"
+
+[378]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L109-L119 "Source code on GitHub"
+
+[379]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L126-L130 "Source code on GitHub"
+
+[380]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L136-L140 "Source code on GitHub"
+
+[381]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L149-L153 "Source code on GitHub"
+
+[382]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L164-L170 "Source code on GitHub"
+
+[383]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L178-L198 "Source code on GitHub"
+
+[384]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L205-L211 "Source code on GitHub"
+
+[385]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L338-L342 "Source code on GitHub"
+
+[386]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L350-L354 "Source code on GitHub"
+
+[387]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L376-L380 "Source code on GitHub"
+
+[388]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L389-L401 "Source code on GitHub"
+
+[389]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L416-L420 "Source code on GitHub"
+
+[390]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/mapboxMap.js#L427-L431 "Source code on GitHub"
+
+[391]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/geo/utilsStatics.js#L6-L90 "Source code on GitHub"
+
+[392]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/jsonToMap.js#L12-L176 "Source code on GitHub"
+
+[393]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L19-L900 "Source code on GitHub"
+
+[394]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L108-L128 "Source code on GitHub"
+
+[395]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L137-L189 "Source code on GitHub"
+
+[396]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L198-L212 "Source code on GitHub"
+
+[397]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L233-L237 "Source code on GitHub"
+
+[398]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L248-L264 "Source code on GitHub"
+
+[399]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L279-L461 "Source code on GitHub"
+
+[400]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L472-L480 "Source code on GitHub"
+
+[401]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L490-L500 "Source code on GitHub"
+
+[402]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L511-L529 "Source code on GitHub"
+
+[403]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L539-L547 "Source code on GitHub"
+
+[404]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L559-L636 "Source code on GitHub"
+
+[405]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L659-L666 "Source code on GitHub"
+
+[406]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L678-L686 "Source code on GitHub"
+
+[407]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L799-L819 "Source code on GitHub"
+
+[408]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L826-L831 "Source code on GitHub"
+
+[409]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L840-L844 "Source code on GitHub"
+
+[410]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/map/mapStyle.js#L859-L898 "Source code on GitHub"
+
+[411]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/Request.js#L8-L117 "Source code on GitHub"
+
+[412]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/Request.js#L16-L37 "Source code on GitHub"
+
+[413]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/request.js#L16-L37 "Source code on GitHub"
+
+[414]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/Request.js#L50-L60 "Source code on GitHub"
+
+[415]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/request.js#L50-L60 "Source code on GitHub"
+
+[416]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/Request.js#L68-L78 "Source code on GitHub"
+
+[417]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/request.js#L68-L78 "Source code on GitHub"
+
+[418]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/Request.js#L87-L97 "Source code on GitHub"
+
+[419]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/request.js#L87-L97 "Source code on GitHub"
+
+[420]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/Request.js#L105-L115 "Source code on GitHub"
+
+[421]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/request.js#L105-L115 "Source code on GitHub"
+
+[422]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/request.js#L8-L117 "Source code on GitHub"
+
+[423]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/utils.js#L13-L19 "Source code on GitHub"
+
+[424]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/utils.js#L28-L38 "Source code on GitHub"
+
+[425]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/utils.js#L83-L96 "Source code on GitHub"
+
+[426]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/utils.js#L105-L119 "Source code on GitHub"
+
+[427]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/utils.js#L129-L176 "Source code on GitHub"
+
+[428]: https://github.com/geostarters/icgc-js-common/blob/1de7d7b60f37c15b5330101c12349a590074863d/src/utils.js#L188-L201 "Source code on GitHub"

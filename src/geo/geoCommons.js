@@ -3,8 +3,11 @@
 import booleanWithin from "@turf/boolean-within";
 import bboxPolygon from "@turf/bbox-polygon";
 
+/**
+ * Classe geoCommons
+ */
 
-export default class Common {
+export default class geoCommons {
 
     /**
      * getFirstSymbolLayerId form MapboxStyle.

@@ -1,7 +1,5 @@
 // @flow
 
-import LatLon from "./geo/latlon";
-import LatLonBounds from "./geo/latlonBounds";
 import Map from "./geo/map";
 import MapboxMap from "./geo/mapboxMap";
 import Request from "./request";
@@ -14,11 +12,11 @@ import CsvStatics from "./geo/csvStatics";
 import GeoJSONStatics from "./geo/geoJSONStatics";
 import UtilsStats from "./geo/utilsStatics";
 import GeoUtils from "./geo/geoUtils";
-import GeoCommons from "./geo/geoCommon";
+import GeoCommons from "./geo/GeoCommons";
 
 export {
-	LatLon,
-	LatLonBounds,
+	GeoUtils,
+	GeoCommons,
 	Map,
 	MapboxMap,
 	Request,
@@ -29,7 +27,6 @@ export {
 	BridgeStatics,
 	CsvStatics,
 	GeoJSONStatics,
-	UtilsStats,
-	GeoUtils,
-	GeoCommons
+	UtilsStats
+
 };
