@@ -2,7 +2,7 @@
   "name": "@geostarters/common",
   "homepage": "https://github.com/geostarters/icgc-js-common",
   "bugs": "https://github.com/geostarters/icgc-js-common/issues",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "ICGC JS common",
   "author": "@geostarters",
   "main": "dist/commonjs/index.js",
@@ -107,13 +107,13 @@
     ]
   },
   "dependencies": {
-    "@mapbox/geojson-extent": "^0.3.2",
+    "@mapbox/geojson-extent": "^1.0.1",
     "@turf/bbox-polygon": "^6.5.0",
     "@turf/boolean-within": "^6.5.0",
     "@turf/turf": "^6.5.0",
     "axios": "^0.26.1",
     "chroma-js": "^2.4.2",
-    "geostats": "^1.8.0"
+    "geostats": "^2.0.0"
   },
   "peerDependencies": {
     "mapbox-gl": "^2.7.1"
