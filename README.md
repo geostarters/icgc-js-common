@@ -25,6 +25,25 @@ Usage with Commonjs:
 const Utils =  require("@geostarters/common");
 ```
 
+Besides it,  it is generated a single file package and its .map, using [browserify](http://browserify.org/):
+
+  **dist/ICGCCommon.js**
+
+  **dist/ICGCCommon.map.js**
+
+
+Usage example with Svelte
+
+```js
+
+import {GeoCommons} from "@geostarters/common/dist/commonjs";
+
+ const geoCommons = new GeoCommons();
+
+ geoCommons.getEmptyGeoJSON());
+
+```
+
 
 ## DOCUMENTATION
 
@@ -32,12 +51,6 @@ const Utils =  require("@geostarters/common");
 
 
 
-
-Besides it,  it is generated a single file package and its .map, using [browserify](http://browserify.org/):
-
-  **dist/ICGCCommon.js**
-
-  **dist/ICGCCommon.map.js**
 
 ## Environment
 
