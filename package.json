@@ -30,7 +30,7 @@
     "build-all": "run-s  clean build-web build-react build-modules",
     "build-unflow": "flow-remove-types  src/ --out-dir dist/es/",
     "build-modules": "babel --plugins @babel/plugin-transform-modules-commonjs dist/es/ --out-dir dist/commonjs/",
-    "build-docs": "documentation build --github --format md --config ./docs/documentation.yml --output api.md src/",
+    "build-docs": "documentation build --github --format md --config ./docs/documentation.yml --output api.md src/index.js",
     "lint": "eslint --fix --cache --ignore-path .gitignore src test",
     "lint-docs": "documentation lint src/index.js",
     "clean": "run-s clean:dist",

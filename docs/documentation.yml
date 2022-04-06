@@ -1,7 +1,7 @@
 toc:
-  - name: Geography & Geometry
+  - name: ICGC Commons
     description: |
-      `LatLon` and `LatLonBounds` represent points and rectanges in geographic
-      coordinates.
-  - LatLon
-  - LatLonBounds
+      Common useful geo functions.
+  - GeoCommons
+  - GeoUtils
+ 

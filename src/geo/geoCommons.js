@@ -7,11 +7,10 @@ import bboxPolygon from "@turf/bbox-polygon";
  * Classe geoCommons
  */
 
-export default class geoCommons {
+export default class GeoCommons {
 
     /**
      * getFirstSymbolLayerId form MapboxStyle.
-     * @function getFirstSymbolLayerId
      * @param {object} layers - Input style object map.getLayers().
      * @return {object} layer.
      */
@@ -27,7 +26,6 @@ export default class geoCommons {
     }
 
     /**
-     * @function getEmptyGeoJSON
      * @return {object} geojson.
      */
     getEmptyGeoJSON() {
@@ -37,9 +35,8 @@ export default class geoCommons {
         };
     }
     /**
-     * @function getGeoJSONPoint
-     * @param {float} lng - Longitude.
-     * @param {float} lat - Latitude.
+     * @param {number} lng - Longitude.
+     * @param {number} lat - Latitude.
      * @return {object} point geojson.
      */
     getGeoJSONPoint(lng, lat) {
@@ -156,9 +153,8 @@ export default class geoCommons {
 
     /**
      * X,Y coordinates inside Catalonia BBOX.
-     * @function isInsideCat
-     * @param {float} x - Longitude.
-     * @param {float} y - Latitude.
+     * @param {number} x - Longitude.
+     * @param {number} y - Latitude.
      * @return {boolean}
      */
     isInsideCat(x, y) {
@@ -176,7 +172,6 @@ export default class geoCommons {
     }
     /**
      * Check is a Source is Used.
-     * @function usedSource
      * @param {object} source - Input style object map.getSources().
      * @param {object} layersArray - Input stlke object map.getLayers().
      * @return {boolean}
@@ -197,7 +192,6 @@ export default class geoCommons {
 
     /**
      * removeAccents form MapboxStyle.
-     * @function getFirstSymbolLayerId
      * @param {string} string - I.
      * @return {string} string.
      */
